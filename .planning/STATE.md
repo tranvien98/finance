@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 03-03-PLAN.md
-last_updated: "2026-03-22T16:26:10.609Z"
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-03-22T17:14:07.816Z"
 progress:
   total_phases: 7
   completed_phases: 3
-  total_plans: 13
-  completed_plans: 13
+  total_plans: 18
+  completed_plans: 14
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Quick, frictionless expense tracking — send a Telegram message like "ate pho 50k" and it automatically creates a categorized expense entry.
-**Current focus:** Phase 03 — dashboard-and-filters
+**Current focus:** Phase 05 — Telegram Bot
 
 ## Current Position
 
-Phase: 03 (dashboard-and-filters) — EXECUTING
-Plan: 4 of 4
+Phase: 05 (Telegram Bot) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -56,6 +56,7 @@ Plan: 4 of 4
 | Phase 03-dashboard-and-filters P02 | 4min | 3 tasks | 6 files |
 | Phase 03-dashboard-and-filters P03 | 81s | 2 tasks | 2 files |
 | Phase 03-dashboard-and-filters P03 | 10min | 3 tasks | 2 files |
+| Phase 05-telegram-bot P05-01 | 1min | 3 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -88,6 +89,8 @@ Recent decisions affecting current work:
 - [Phase 03-dashboard-and-filters]: DashboardFilters uses useSearchParams + router.push for URL-driven state — no local state
 - [Phase 03-dashboard-and-filters]: Suspense wraps DashboardFilters to satisfy Next.js 16 CSR bailout requirement in production builds
 - [Phase 03-dashboard-and-filters]: Dashboard page calls getDashboardStats() directly — Server Component can access DB layer without HTTP fetch
+- [Phase 05-telegram-bot]: telegramWebhookSecret stored as plain text (not encrypted) — required for lookupability in webhook handler
+- [Phase 05-telegram-bot]: Webhook secret regenerated on each registration to rotate security token
 
 ### Pending Todos
 
@@ -100,6 +103,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T16:26:10.606Z
-Stopped at: Completed 03-03-PLAN.md
+Last session: 2026-03-22T17:14:07.813Z
+Stopped at: Completed 05-01-PLAN.md
 Resume file: None
