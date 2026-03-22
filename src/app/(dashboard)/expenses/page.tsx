@@ -3,6 +3,7 @@ import { dbConnect } from '@/lib/db';
 import Expense from '@/models/expense.model';
 import { redirect } from 'next/navigation';
 import { ExpenseList } from '@/components/expenses/expense-list';
+import { QuickAdd } from '@/components/expenses/quick-add';
 
 export const metadata = { title: 'Expenses — Finance' };
 
@@ -17,6 +18,7 @@ export default async function ExpensesPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
+      <QuickAdd />
       <ExpenseList expenses={JSON.parse(JSON.stringify(expenses))} />
     </div>
   );
