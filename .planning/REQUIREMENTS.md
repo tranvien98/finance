@@ -23,17 +23,17 @@
 
 ### Dashboard & Analytics
 
-- [ ] **DASH-01**: Dashboard shows monthly total expenses and total investments
-- [ ] **DASH-02**: Dashboard shows pie chart of expenses by category
-- [ ] **DASH-03**: Dashboard shows line chart of expenses over time
-- [ ] **DASH-04**: Dashboard shows month-over-month comparison with % change
+- [x] **DASH-01**: Dashboard shows monthly total expenses and total investments
+- [x] **DASH-02**: Dashboard shows pie chart of expenses by category
+- [x] **DASH-03**: Dashboard shows line chart of expenses over time
+- [x] **DASH-04**: Dashboard shows month-over-month comparison with % change
 - [ ] **DASH-05**: Dashboard highlights simple AI-generated spending insights
 
 ### Filters
 
-- [ ] **FILT-01**: User can filter expenses and investments by month
-- [ ] **FILT-02**: User can filter expenses and investments by year
-- [ ] **FILT-03**: User can filter expenses and investments by custom date range (from - to)
+- [x] **FILT-01**: User can filter expenses and investments by month
+- [x] **FILT-02**: User can filter expenses and investments by year
+- [x] **FILT-03**: User can filter expenses and investments by custom date range (from - to)
 
 ### AI Classification
 
@@ -136,13 +136,13 @@
 | EXPN-04 | Phase 2 | Complete |
 | EXPN-05 | Phase 2 | Complete |
 | EXPN-06 | Phase 2 | Complete |
-| DASH-01 | Phase 3 | Pending |
-| DASH-02 | Phase 3 | Pending |
-| DASH-03 | Phase 3 | Pending |
-| DASH-04 | Phase 3 | Pending |
-| FILT-01 | Phase 3 | Pending |
-| FILT-02 | Phase 3 | Pending |
-| FILT-03 | Phase 3 | Pending |
+| DASH-01 | Phase 3 | Complete |
+| DASH-02 | Phase 3 | Complete |
+| DASH-03 | Phase 3 | Complete |
+| DASH-04 | Phase 3 | Complete |
+| FILT-01 | Phase 3 | Complete |
+| FILT-02 | Phase 3 | Complete |
+| FILT-03 | Phase 3 | Complete |
 | AICL-01 | Phase 4 | Pending |
 | AICL-02 | Phase 4 | Pending |
 | AICL-03 | Phase 4 | Pending |
