@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Foundation** - Auth, database connection, encryption, and project infrastructure
 - [ ] **Phase 2: Expense Management** - Full expense CRUD and custom category management
-- [ ] **Phase 3: Dashboard and Filters** - Analytics dashboard with charts and date filtering
+- [x] **Phase 3: Dashboard and Filters** - Analytics dashboard with charts and date filtering (completed 2026-03-22)
 - [ ] **Phase 4: AI Classification** - Free-text expense parsing via OpenRouter with Vietnamese NLP
 - [ ] **Phase 5: Telegram Bot** - Webhook integration turning Telegram messages into expenses
 - [ ] **Phase 6: Investment Tracking** - Full investment CRUD for mutual funds, crypto, and gold
@@ -75,7 +75,7 @@ Plans:
 - [x] 03-00-PLAN.md — Wave 0 test stubs for all 7 dashboard requirements
 - [x] 03-01-PLAN.md — Dashboard API route, MongoDB aggregations, date range resolver
 - [x] 03-02-PLAN.md — Recharts install, stat card, pie chart, and line chart components
-- [ ] 03-03-PLAN.md — Filter controls and dashboard page assembly
+- [x] 03-03-PLAN.md — Filter controls and dashboard page assembly
 
 ### Phase 4: AI Classification
 **Goal**: Free-text input in Vietnamese is reliably parsed into structured expense data — the AI service is stable, cached, and resilient enough for the Telegram bot to depend on it
@@ -143,7 +143,7 @@ Note: Phase 4 depends only on Phase 1 (not Phase 2 or 3), and Phase 6 depends on
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/4 | Planning complete | - |
 | 2. Expense Management | 1/5 | In Progress|  |
-| 3. Dashboard and Filters | 3/4 | In Progress|  |
+| 3. Dashboard and Filters | 4/4 | Complete   | 2026-03-22 |
 | 4. AI Classification | 0/? | Not started | - |
 | 5. Telegram Bot | 0/? | Not started | - |
 | 6. Investment Tracking | 0/? | Not started | - |
