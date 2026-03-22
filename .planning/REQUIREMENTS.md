@@ -61,10 +61,10 @@
 
 ### Settings & Security
 
-- [ ] **SETT-01**: User can store their OpenRouter API key in settings
-- [ ] **SETT-02**: API keys are encrypted with AES-256-GCM before storing in database
-- [ ] **SETT-03**: Encrypt/decrypt helper functions use ENCRYPTION_SECRET env var with scrypt key derivation
-- [ ] **SETT-04**: API keys are decrypted only when calling external services
+- [x] **SETT-01**: User can store their OpenRouter API key in settings
+- [x] **SETT-02**: API keys are encrypted with AES-256-GCM before storing in database
+- [x] **SETT-03**: Encrypt/decrypt helper functions use ENCRYPTION_SECRET env var with scrypt key derivation
+- [x] **SETT-04**: API keys are decrypted only when calling external services
 
 ### UI/UX
 
@@ -122,10 +122,10 @@
 | AUTH-02 | Phase 1 | Complete |
 | AUTH-03 | Phase 1 | Complete |
 | AUTH-04 | Phase 1 | Complete |
-| SETT-01 | Phase 1 | Pending |
-| SETT-02 | Phase 1 | Pending |
-| SETT-03 | Phase 1 | Pending |
-| SETT-04 | Phase 1 | Pending |
+| SETT-01 | Phase 1 | Complete |
+| SETT-02 | Phase 1 | Complete |
+| SETT-03 | Phase 1 | Complete |
+| SETT-04 | Phase 1 | Complete |
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Pending |
 | INFR-03 | Phase 1 | Pending |
