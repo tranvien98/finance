@@ -27,12 +27,14 @@ import {
 import type { SerializedExpense } from './expense-list';
 
 const expenseFormSchema = z.object({
-  amount: z.coerce
-    .number()
-    .int('Amount must be a whole number (no decimals).')
-    .positive('Amount must be greater than zero.'),
+  amount: z
+    .string()
+    .min(1, 'Amount is required.')
+    .refine((v) => !isNaN(Number(v)), { message: 'Amount must be a number.' })
+    .refine((v) => Number.isInteger(Number(v)), { message: 'Amount must be a whole number (no decimals).' })
+    .refine((v) => Number(v) > 0, { message: 'Amount must be greater than zero.' }),
   category: z.string().min(1, 'Please select a category.'),
-  note: z.string().max(500).default(''),
+  note: z.string().max(500),
   date: z.string().min(1, 'Date is required.'),
 });
 
@@ -58,7 +60,7 @@ export function ExpenseForm({ open, onOpenChange, expense, onSuccess }: ExpenseF
   const form = useForm<ExpenseFormValues>({
     resolver: zodResolver(expenseFormSchema),
     defaultValues: {
-      amount: expense?.amount ?? ('' as unknown as number),
+      amount: expense?.amount != null ? String(expense.amount) : '',
       category: expense?.category ?? '',
       note: expense?.note ?? '',
       date: expense
@@ -69,7 +71,7 @@ export function ExpenseForm({ open, onOpenChange, expense, onSuccess }: ExpenseF
 
   useEffect(() => {
     form.reset({
-      amount: expense?.amount ?? ('' as unknown as number),
+      amount: expense?.amount != null ? String(expense.amount) : '',
       category: expense?.category ?? '',
       note: expense?.note ?? '',
       date: expense
@@ -82,7 +84,7 @@ export function ExpenseForm({ open, onOpenChange, expense, onSuccess }: ExpenseF
     try {
       const url = isEdit ? `/api/expenses/${expense!._id}` : '/api/expenses';
       const method = isEdit ? 'PATCH' : 'POST';
-      const body = { ...data, date: new Date(data.date).toISOString() };
+      const body = { ...data, amount: Number(data.amount), date: new Date(data.date).toISOString() };
       const res = await fetch(url, {
         method,
         headers: { 'Content-Type': 'application/json' },
