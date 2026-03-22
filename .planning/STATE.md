@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 02-expense-management-02-00-PLAN.md
-last_updated: "2026-03-22T11:24:35.144Z"
+stopped_at: Completed 02-expense-management-02-02-PLAN.md
+last_updated: "2026-03-22T11:27:30.832Z"
 progress:
   total_phases: 7
   completed_phases: 1
   total_plans: 9
-  completed_plans: 5
+  completed_plans: 6
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 ## Current Position
 
 Phase: 02 (expense-management) — EXECUTING
-Plan: 2 of 5
+Plan: 3 of 5
 
 ## Performance Metrics
 
@@ -47,6 +47,7 @@ Plan: 2 of 5
 
 *Updated after each plan completion*
 | Phase 02-expense-management P00 | 2 | 2 tasks | 5 files |
+| Phase 02-expense-management P02 | 67s | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -62,6 +63,8 @@ Recent decisions affecting current work:
 - Mongoose connection singleton (global._mongoose, maxPoolSize: 1) — mandatory for serverless
 - [Phase 02-expense-management]: Dynamic imports in test files prevent compile errors before route handlers exist (Wave 0 design)
 - [Phase 02-expense-management]: testTimeout 30000ms in vitest.config.ts — MongoMemoryServer binary download takes 10-20s on first run
+- [Phase 02-expense-management]: Use z.number().int() for server-side integer VND validation (no coerce needed on pre-parsed JSON)
+- [Phase 02-expense-management]: Next.js 16 async params: await ctx.params before destructuring id in dynamic route handlers
 
 ### Pending Todos
 
@@ -74,6 +77,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T11:24:35.141Z
-Stopped at: Completed 02-expense-management-02-00-PLAN.md
+Last session: 2026-03-22T11:27:30.828Z
+Stopped at: Completed 02-expense-management-02-02-PLAN.md
 Resume file: None
