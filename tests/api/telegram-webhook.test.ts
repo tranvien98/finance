@@ -25,6 +25,12 @@ vi.mock('@/lib/telegram', () => ({
   sendMessage: vi.fn().mockResolvedValue({ ok: true }),
 }));
 
+// Mock dbConnect() to no-op -- tests manage the MongoDB connection directly
+// via MongoMemoryServer. Must be at top level so vi.mock hoisting applies.
+vi.mock('@/lib/db', () => ({
+  dbConnect: vi.fn(() => Promise.resolve(mongoose)),
+}));
+
 let mongod: MongoMemoryServer;
 
 beforeAll(async () => {
@@ -33,11 +39,6 @@ beforeAll(async () => {
   process.env.MONGODB_URI = uri;
   process.env.ENCRYPTION_SECRET = 'test-secret-key-for-encryption-32b';
   await mongoose.connect(uri);
-
-  // Mock dbConnect() to no-op since we manage the connection directly
-  vi.mock('@/lib/db', () => ({
-    dbConnect: vi.fn(() => Promise.resolve(mongoose)),
-  }));
 });
 
 afterAll(async () => {
