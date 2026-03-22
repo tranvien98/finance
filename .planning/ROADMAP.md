@@ -101,9 +101,11 @@ Plans:
   3. The Telegram bot replies with a confirmation message showing the parsed expense details
   4. Sending a message with a missing or incorrect secret token returns a 401 and creates no expense
   5. The webhook returns HTTP 200 immediately regardless of how long AI classification takes; duplicate messages from Telegram retries do not create duplicate expenses
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
+- [ ] 05-01-PLAN.md — Webhook registration and settings integration (TGBR-01, TGBR-02)
+- [ ] 05-02-PLAN.md — Webhook endpoint with validation, idempotency, and async expense creation (TGBR-03, TGBR-04, TGBR-05)
 
 ### Phase 6: Investment Tracking
 **Goal**: Users can record and review their investment portfolio alongside expenses — the financial picture is complete

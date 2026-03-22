@@ -6,6 +6,7 @@ export interface IUser extends Document {
   hashedPassword: string;
   encryptedOpenrouterKey?: string;
   encryptedTelegramBotToken?: string;
+  telegramWebhookSecret?: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -30,6 +31,12 @@ const UserSchema = new Schema<IUser>(
     encryptedTelegramBotToken: {
       type: String,
       default: null,
+    },
+    telegramWebhookSecret: {
+      type: String,
+      default: null,
+      unique: true,
+      sparse: true,
     },
   },
   { timestamps: true }
