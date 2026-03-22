@@ -52,12 +52,14 @@ Exceptions:
 
 ## Typography
 
+Two weights only: 400 (regular) for body text, 600 (semibold) for all emphasized text (labels, headings, display). Size contrast between 14px and 28px is sufficient to distinguish Display from Body without a separate weight.
+
 | Role | Size | Weight | Line Height | Usage |
 |------|------|--------|-------------|-------|
 | Body | 14px | 400 | 1.5 | Form field values, settings description text, error messages |
-| Label | 14px | 500 | 1.4 | Form field labels, settings card section headers |
+| Label | 14px | 600 | 1.4 | Form field labels, settings card section headers |
 | Heading | 20px | 600 | 1.2 | Auth card heading ("Welcome back", "Create account"), settings card title |
-| Display | 28px | 700 | 1.1 | Reserved for app name/logo on auth page only |
+| Display | 28px | 600 | 1.1 | Reserved for app name/logo on auth page only |
 
 Font stack: `Inter, ui-sans-serif, system-ui, sans-serif` (shadcn default CSS variable `--font-sans`).
 
@@ -114,7 +116,7 @@ Third-party registries: none.
 **Layout:** Full-viewport centered column. Gradient background (`from-zinc-950 via-zinc-900 to-purple-950/20`). Single `Card` (400px wide on desktop, fluid on mobile) centered horizontally and vertically with `min-h-screen flex items-center justify-center`.
 
 **Card contents (top to bottom):**
-1. App name: "Finance" — Display typography (28px, weight 700)
+1. App name: "Finance" — Display typography (28px, weight 600)
 2. Tagline: "Track expenses. Stay in control." — Body typography (14px, weight 400, muted text)
 3. `Tabs` component: "Sign in" | "Create account" — active tab has accent underline indicator
 4. Tab panel: form fields + submit button
@@ -297,3 +299,4 @@ No third-party registries declared for this phase.
 | Password minimum 8 chars, no complexity | Claude discretion — stated as user's discretion area |
 | Card expand/collapse 200ms animation | Claude discretion — stated as user's discretion area |
 | 30-second reveal auto-hide | Claude discretion — security best practice for secret display |
+| Typography weights collapsed to 2 (400, 600) | Checker revision — size contrast (14px vs 28px) replaces weight as Display differentiator |
