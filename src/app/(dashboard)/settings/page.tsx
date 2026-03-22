@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { ApiKeyCard } from '@/components/settings/api-key-card';
+import { TelegramBotCard } from '@/components/settings/telegram-bot-card';
+import { AccountCard } from '@/components/settings/account-card';
 
 export const metadata: Metadata = {
   title: 'Settings — Finance',
@@ -6,9 +9,12 @@ export const metadata: Metadata = {
 
 export default function SettingsPage() {
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-semibold">Settings</h1>
-      <p className="text-muted-foreground mt-2">Settings will appear here.</p>
+    <div className="mx-auto max-w-[720px] px-4 pt-16">
+      <div className="flex flex-col gap-8">
+        <ApiKeyCard />
+        <TelegramBotCard />
+        <AccountCard />
+      </div>
     </div>
   );
 }
