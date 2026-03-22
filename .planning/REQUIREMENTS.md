@@ -76,10 +76,10 @@
 
 ### Infrastructure
 
-- [ ] **INFR-01**: Mongoose connection singleton for serverless (maxPoolSize: 1)
+- [x] **INFR-01**: Mongoose connection singleton for serverless (maxPoolSize: 1)
 - [ ] **INFR-02**: Error logging for API failures
 - [ ] **INFR-03**: Seed data script for development/demo
-- [ ] **INFR-04**: Example .env file with all required environment variables
+- [x] **INFR-04**: Example .env file with all required environment variables
 
 ## v2 Requirements
 
@@ -126,10 +126,10 @@
 | SETT-02 | Phase 1 | Pending |
 | SETT-03 | Phase 1 | Pending |
 | SETT-04 | Phase 1 | Pending |
-| INFR-01 | Phase 1 | Pending |
+| INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Pending |
 | INFR-03 | Phase 1 | Pending |
-| INFR-04 | Phase 1 | Pending |
+| INFR-04 | Phase 1 | Complete |
 | EXPN-01 | Phase 2 | Pending |
 | EXPN-02 | Phase 2 | Pending |
 | EXPN-03 | Phase 2 | Pending |
