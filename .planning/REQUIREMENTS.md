@@ -14,12 +14,12 @@
 
 ### Expense Management
 
-- [ ] **EXPN-01**: User can create an expense with amount (integer VND), category, note, and date
-- [ ] **EXPN-02**: User can view a list of their expenses
-- [ ] **EXPN-03**: User can edit an existing expense
-- [ ] **EXPN-04**: User can delete an expense
-- [ ] **EXPN-05**: User can create, rename, and delete custom expense categories
-- [ ] **EXPN-06**: Default categories exist on first use (food, entertainment, transportation, bills, other)
+- [x] **EXPN-01**: User can create an expense with amount (integer VND), category, note, and date
+- [x] **EXPN-02**: User can view a list of their expenses
+- [x] **EXPN-03**: User can edit an existing expense
+- [x] **EXPN-04**: User can delete an expense
+- [x] **EXPN-05**: User can create, rename, and delete custom expense categories
+- [x] **EXPN-06**: Default categories exist on first use (food, entertainment, transportation, bills, other)
 
 ### Dashboard & Analytics
 
@@ -130,12 +130,12 @@
 | INFR-02 | Phase 1 | Complete |
 | INFR-03 | Phase 1 | Complete |
 | INFR-04 | Phase 1 | Complete |
-| EXPN-01 | Phase 2 | Pending |
-| EXPN-02 | Phase 2 | Pending |
-| EXPN-03 | Phase 2 | Pending |
-| EXPN-04 | Phase 2 | Pending |
-| EXPN-05 | Phase 2 | Pending |
-| EXPN-06 | Phase 2 | Pending |
+| EXPN-01 | Phase 2 | Complete |
+| EXPN-02 | Phase 2 | Complete |
+| EXPN-03 | Phase 2 | Complete |
+| EXPN-04 | Phase 2 | Complete |
+| EXPN-05 | Phase 2 | Complete |
+| EXPN-06 | Phase 2 | Complete |
 | DASH-01 | Phase 3 | Pending |
 | DASH-02 | Phase 3 | Pending |
 | DASH-03 | Phase 3 | Pending |

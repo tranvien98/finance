@@ -53,7 +53,7 @@ Plans:
 **Plans**: 5 plans
 
 Plans:
-- [ ] 02-00-PLAN.md — Test infrastructure (vitest, mongodb-memory-server, RED test stubs)
+- [x] 02-00-PLAN.md — Test infrastructure (vitest, mongodb-memory-server, RED test stubs)
 - [ ] 02-01-PLAN.md — shadcn components, Category model, Category API routes
 - [ ] 02-02-PLAN.md — Expense API routes (GET/POST/PATCH/DELETE)
 - [ ] 02-03-PLAN.md — Expenses page UI (list, create/edit dialog, delete confirmation)
@@ -138,7 +138,7 @@ Note: Phase 4 depends only on Phase 1 (not Phase 2 or 3), and Phase 6 depends on
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/4 | Planning complete | - |
-| 2. Expense Management | 0/5 | Planning complete | - |
+| 2. Expense Management | 1/5 | In Progress|  |
 | 3. Dashboard and Filters | 0/? | Not started | - |
 | 4. AI Classification | 0/? | Not started | - |
 | 5. Telegram Bot | 0/? | Not started | - |
