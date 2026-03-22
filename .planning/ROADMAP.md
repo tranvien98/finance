@@ -56,7 +56,7 @@ Plans:
 - [x] 02-00-PLAN.md — Test infrastructure (vitest, mongodb-memory-server, RED test stubs)
 - [x] 02-01-PLAN.md — shadcn components, Category model, Category API routes
 - [x] 02-02-PLAN.md — Expense API routes (GET/POST/PATCH/DELETE)
-- [ ] 02-03-PLAN.md — Expenses page UI (list, create/edit dialog, delete confirmation)
+- [x] 02-03-PLAN.md — Expenses page UI (list, create/edit dialog, delete confirmation)
 - [ ] 02-04-PLAN.md — Category manager dialog, integration, visual verification
 
 ### Phase 3: Dashboard and Filters
