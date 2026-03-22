@@ -118,58 +118,58 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | — | Pending |
-| AUTH-02 | — | Pending |
-| AUTH-03 | — | Pending |
-| AUTH-04 | — | Pending |
-| EXPN-01 | — | Pending |
-| EXPN-02 | — | Pending |
-| EXPN-03 | — | Pending |
-| EXPN-04 | — | Pending |
-| EXPN-05 | — | Pending |
-| EXPN-06 | — | Pending |
-| DASH-01 | — | Pending |
-| DASH-02 | — | Pending |
-| DASH-03 | — | Pending |
-| DASH-04 | — | Pending |
-| DASH-05 | — | Pending |
-| FILT-01 | — | Pending |
-| FILT-02 | — | Pending |
-| FILT-03 | — | Pending |
-| AICL-01 | — | Pending |
-| AICL-02 | — | Pending |
-| AICL-03 | — | Pending |
-| AICL-04 | — | Pending |
-| AICL-05 | — | Pending |
-| TGBR-01 | — | Pending |
-| TGBR-02 | — | Pending |
-| TGBR-03 | — | Pending |
-| TGBR-04 | — | Pending |
-| TGBR-05 | — | Pending |
-| INVS-01 | — | Pending |
-| INVS-02 | — | Pending |
-| INVS-03 | — | Pending |
-| INVS-04 | — | Pending |
-| INVS-05 | — | Pending |
-| SETT-01 | — | Pending |
-| SETT-02 | — | Pending |
-| SETT-03 | — | Pending |
-| SETT-04 | — | Pending |
-| UIUX-01 | — | Pending |
-| UIUX-02 | — | Pending |
-| UIUX-03 | — | Pending |
-| UIUX-04 | — | Pending |
-| UIUX-05 | — | Pending |
-| INFR-01 | — | Pending |
-| INFR-02 | — | Pending |
-| INFR-03 | — | Pending |
-| INFR-04 | — | Pending |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| AUTH-04 | Phase 1 | Pending |
+| SETT-01 | Phase 1 | Pending |
+| SETT-02 | Phase 1 | Pending |
+| SETT-03 | Phase 1 | Pending |
+| SETT-04 | Phase 1 | Pending |
+| INFR-01 | Phase 1 | Pending |
+| INFR-02 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Pending |
+| INFR-04 | Phase 1 | Pending |
+| EXPN-01 | Phase 2 | Pending |
+| EXPN-02 | Phase 2 | Pending |
+| EXPN-03 | Phase 2 | Pending |
+| EXPN-04 | Phase 2 | Pending |
+| EXPN-05 | Phase 2 | Pending |
+| EXPN-06 | Phase 2 | Pending |
+| DASH-01 | Phase 3 | Pending |
+| DASH-02 | Phase 3 | Pending |
+| DASH-03 | Phase 3 | Pending |
+| DASH-04 | Phase 3 | Pending |
+| FILT-01 | Phase 3 | Pending |
+| FILT-02 | Phase 3 | Pending |
+| FILT-03 | Phase 3 | Pending |
+| AICL-01 | Phase 4 | Pending |
+| AICL-02 | Phase 4 | Pending |
+| AICL-03 | Phase 4 | Pending |
+| AICL-04 | Phase 4 | Pending |
+| AICL-05 | Phase 4 | Pending |
+| TGBR-01 | Phase 5 | Pending |
+| TGBR-02 | Phase 5 | Pending |
+| TGBR-03 | Phase 5 | Pending |
+| TGBR-04 | Phase 5 | Pending |
+| TGBR-05 | Phase 5 | Pending |
+| INVS-01 | Phase 6 | Pending |
+| INVS-02 | Phase 6 | Pending |
+| INVS-03 | Phase 6 | Pending |
+| INVS-04 | Phase 6 | Pending |
+| INVS-05 | Phase 6 | Pending |
+| UIUX-01 | Phase 7 | Pending |
+| UIUX-02 | Phase 7 | Pending |
+| UIUX-03 | Phase 7 | Pending |
+| UIUX-04 | Phase 7 | Pending |
+| UIUX-05 | Phase 7 | Pending |
+| DASH-05 | Phase 7 | Pending |
 
 **Coverage:**
-- v1 requirements: 44 total
-- Mapped to phases: 0
-- Unmapped: 44 ⚠️
+- v1 requirements: 46 total
+- Mapped to phases: 46
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-22*
-*Last updated: 2026-03-22 after initial definition*
+*Last updated: 2026-03-22 after roadmap creation*
