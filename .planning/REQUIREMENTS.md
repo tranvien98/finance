@@ -45,11 +45,11 @@
 
 ### Telegram Bot
 
-- [ ] **TGBR-01**: User can input their Telegram Bot Token in settings
-- [ ] **TGBR-02**: App registers a webhook endpoint at /api/telegram/webhook
-- [ ] **TGBR-03**: Webhook receives Telegram messages, parses them via AI, and auto-creates expenses
-- [ ] **TGBR-04**: Webhook validates Telegram secret token before processing
-- [ ] **TGBR-05**: Webhook returns 200 immediately and processes AI classification asynchronously
+- [x] **TGBR-01**: User can input their Telegram Bot Token in settings
+- [x] **TGBR-02**: App registers a webhook endpoint at /api/telegram/webhook
+- [x] **TGBR-03**: Webhook receives Telegram messages, parses them via AI, and auto-creates expenses
+- [x] **TGBR-04**: Webhook validates Telegram secret token before processing
+- [x] **TGBR-05**: Webhook returns 200 immediately and processes AI classification asynchronously
 
 ### Investment Management
 
@@ -148,11 +148,11 @@
 | AICL-03 | Phase 4 | Pending |
 | AICL-04 | Phase 4 | Pending |
 | AICL-05 | Phase 4 | Pending |
-| TGBR-01 | Phase 5 | Pending |
-| TGBR-02 | Phase 5 | Pending |
-| TGBR-03 | Phase 5 | Pending |
-| TGBR-04 | Phase 5 | Pending |
-| TGBR-05 | Phase 5 | Pending |
+| TGBR-01 | Phase 5 | Complete |
+| TGBR-02 | Phase 5 | Complete |
+| TGBR-03 | Phase 5 | Complete |
+| TGBR-04 | Phase 5 | Complete |
+| TGBR-05 | Phase 5 | Complete |
 | INVS-01 | Phase 6 | Pending |
 | INVS-02 | Phase 6 | Pending |
 | INVS-03 | Phase 6 | Pending |

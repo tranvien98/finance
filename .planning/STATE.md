@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-22T17:14:07.816Z"
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-03-22T17:21:07.526Z"
 progress:
   total_phases: 7
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 18
-  completed_plans: 14
+  completed_plans: 15
 ---
 
 # Project State
@@ -57,6 +57,7 @@ Plan: 2 of 2
 | Phase 03-dashboard-and-filters P03 | 81s | 2 tasks | 2 files |
 | Phase 03-dashboard-and-filters P03 | 10min | 3 tasks | 2 files |
 | Phase 05-telegram-bot P05-01 | 1min | 3 tasks | 6 files |
+| Phase 05-telegram-bot P05-02 | 5min | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -91,6 +92,9 @@ Recent decisions affecting current work:
 - [Phase 03-dashboard-and-filters]: Dashboard page calls getDashboardStats() directly — Server Component can access DB layer without HTTP fetch
 - [Phase 05-telegram-bot]: telegramWebhookSecret stored as plain text (not encrypted) — required for lookupability in webhook handler
 - [Phase 05-telegram-bot]: Webhook secret regenerated on each registration to rotate security token
+- [Phase 05-telegram-bot]: Dynamic import of ai-classify inside after() with .catch() fallback — route loads and works even if Phase 4 has not delivered src/lib/ai-classify.ts
+- [Phase 05-telegram-bot]: Two-level idempotency for Telegram webhook: pre-response DB check (fast path) + duplicate key 11000 catch (race condition guard)
+- [Phase 05-telegram-bot]: ai-classify.ts stub created so vi.mock() can intercept dynamic import in Vitest tests; Phase 4 replaces entire file
 
 ### Pending Todos
 
@@ -103,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T17:14:07.813Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-03-22T17:21:07.524Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None

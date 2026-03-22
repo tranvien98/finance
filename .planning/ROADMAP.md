@@ -105,7 +105,7 @@ Plans:
 
 Plans:
 - [x] 05-01-PLAN.md — Webhook registration and settings integration (TGBR-01, TGBR-02)
-- [ ] 05-02-PLAN.md — Webhook endpoint with validation, idempotency, and async expense creation (TGBR-03, TGBR-04, TGBR-05)
+- [x] 05-02-PLAN.md — Webhook endpoint with validation, idempotency, and async expense creation (TGBR-03, TGBR-04, TGBR-05)
 
 ### Phase 6: Investment Tracking
 **Goal**: Users can record and review their investment portfolio alongside expenses — the financial picture is complete
