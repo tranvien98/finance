@@ -1,14 +1,23 @@
-import type { Metadata } from 'next';
+import { auth } from '@/lib/auth';
+import { dbConnect } from '@/lib/db';
+import Expense from '@/models/expense.model';
+import { redirect } from 'next/navigation';
+import { ExpenseList } from '@/components/expenses/expense-list';
 
-export const metadata: Metadata = {
-  title: 'Expenses — Finance',
-};
+export const metadata = { title: 'Expenses — Finance' };
 
-export default function ExpensesPage() {
+export default async function ExpensesPage() {
+  const session = await auth();
+  if (!session?.user) redirect('/auth');
+
+  await dbConnect();
+  const expenses = await Expense.find({ userId: (session.user as { id: string }).id })
+    .sort({ date: -1 })
+    .lean();
+
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-semibold">Expenses</h1>
-      <p className="text-muted-foreground mt-2">Your expense list will appear here.</p>
+    <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
+      <ExpenseList expenses={JSON.parse(JSON.stringify(expenses))} />
     </div>
   );
 }
