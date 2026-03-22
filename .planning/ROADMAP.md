@@ -74,7 +74,7 @@ Plans:
 Plans:
 - [x] 03-00-PLAN.md — Wave 0 test stubs for all 7 dashboard requirements
 - [x] 03-01-PLAN.md — Dashboard API route, MongoDB aggregations, date range resolver
-- [ ] 03-02-PLAN.md — Recharts install, stat card, pie chart, and line chart components
+- [x] 03-02-PLAN.md — Recharts install, stat card, pie chart, and line chart components
 - [ ] 03-03-PLAN.md — Filter controls and dashboard page assembly
 
 ### Phase 4: AI Classification
@@ -143,7 +143,7 @@ Note: Phase 4 depends only on Phase 1 (not Phase 2 or 3), and Phase 6 depends on
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/4 | Planning complete | - |
 | 2. Expense Management | 1/5 | In Progress|  |
-| 3. Dashboard and Filters | 2/4 | In Progress|  |
+| 3. Dashboard and Filters | 3/4 | In Progress|  |
 | 4. AI Classification | 0/? | Not started | - |
 | 5. Telegram Bot | 0/? | Not started | - |
 | 6. Investment Tracking | 0/? | Not started | - |
