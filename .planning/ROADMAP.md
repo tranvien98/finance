@@ -36,7 +36,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 - [x] 01-01-PLAN.md — Project scaffold, DB connection, Mongoose models, .env.example
-- [ ] 01-02-PLAN.md — NextAuth credentials provider, auth UI, middleware, protected routes
+- [x] 01-02-PLAN.md — NextAuth credentials provider, auth UI, middleware, protected routes
 - [ ] 01-03-PLAN.md — AES-256-GCM encryption, settings API, settings page UI
 - [ ] 01-04-PLAN.md — Seed data script with Vietnamese data, error logging utility
 

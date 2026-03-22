@@ -7,10 +7,10 @@
 
 ### Authentication
 
-- [ ] **AUTH-01**: User can sign up with email and password
-- [ ] **AUTH-02**: User can log in and stay logged in across browser refresh (JWT session)
-- [ ] **AUTH-03**: User can log out from any page
-- [ ] **AUTH-04**: Unauthenticated users are redirected to login (protected routes)
+- [x] **AUTH-01**: User can sign up with email and password
+- [x] **AUTH-02**: User can log in and stay logged in across browser refresh (JWT session)
+- [x] **AUTH-03**: User can log out from any page
+- [x] **AUTH-04**: Unauthenticated users are redirected to login (protected routes)
 
 ### Expense Management
 
@@ -118,10 +118,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
-| AUTH-03 | Phase 1 | Pending |
-| AUTH-04 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
+| AUTH-03 | Phase 1 | Complete |
+| AUTH-04 | Phase 1 | Complete |
 | SETT-01 | Phase 1 | Pending |
 | SETT-02 | Phase 1 | Pending |
 | SETT-03 | Phase 1 | Pending |
