@@ -58,7 +58,7 @@ const ExpenseSchema = new Schema<IExpense>(
     },
     telegramMessageId: {
       type: Number,
-      default: null,
+      // No default — field must be absent (not null) for sparse unique index to allow multiple docs without telegramMessageId
       sparse: true,
       unique: true,
     },
