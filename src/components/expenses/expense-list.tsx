@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { format } from 'date-fns';
-import { Pencil, Trash2, Receipt, Plus } from 'lucide-react';
+import { Pencil, Trash2, Receipt, Plus, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/table';
 import { ExpenseForm } from './expense-form';
 import { DeleteExpenseDialog } from './delete-expense-dialog';
+import { CategoryManager } from './category-manager';
 
 export interface SerializedExpense {
   _id: string;
@@ -37,6 +38,7 @@ export function ExpenseList({ expenses }: ExpenseListProps) {
   const [formOpen, setFormOpen] = useState(false);
   const [editingExpense, setEditingExpense] = useState<SerializedExpense | null>(null);
   const [deletingExpense, setDeletingExpense] = useState<SerializedExpense | null>(null);
+  const [categoryManagerOpen, setCategoryManagerOpen] = useState(false);
 
   function handleAddExpense() {
     setEditingExpense(null);
@@ -197,7 +199,18 @@ export function ExpenseList({ expenses }: ExpenseListProps) {
         </>
       )}
 
-      {/* Category manager will be added in Plan 04 */}
+      <Button
+        variant="ghost"
+        className="text-gray-600 text-sm"
+        onClick={() => setCategoryManagerOpen(true)}
+      >
+        <Tag className="mr-2 h-4 w-4" />
+        Manage categories
+      </Button>
+      <CategoryManager
+        open={categoryManagerOpen}
+        onOpenChange={setCategoryManagerOpen}
+      />
 
       <ExpenseForm
         open={formOpen}
