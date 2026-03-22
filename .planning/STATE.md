@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: "Completed 03-03-PLAN.md — awaiting checkpoint:human-verify (Task 3)"
-last_updated: "2026-03-22T16:20:30.402Z"
+stopped_at: Completed 03-03-PLAN.md
+last_updated: "2026-03-22T16:26:10.609Z"
 progress:
   total_phases: 7
   completed_phases: 3
@@ -55,6 +55,7 @@ Plan: 4 of 4
 | Phase 03-dashboard-and-filters P01 | 5min | 3 tasks | 3 files |
 | Phase 03-dashboard-and-filters P02 | 4min | 3 tasks | 6 files |
 | Phase 03-dashboard-and-filters P03 | 81s | 2 tasks | 2 files |
+| Phase 03-dashboard-and-filters P03 | 10min | 3 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -84,6 +85,9 @@ Recent decisions affecting current work:
 - [Phase 03-dashboard-and-filters]: Removed default:null from telegramMessageId in ExpenseSchema — sparse unique index requires field to be absent (not null) to allow multiple docs without telegramMessageId
 - [Phase 03-dashboard-and-filters]: DashboardFilters uses useSearchParams + router.push for URL-driven state
 - [Phase 03-dashboard-and-filters]: Suspense wraps DashboardFilters to satisfy Next.js 16 CSR bailout requirement
+- [Phase 03-dashboard-and-filters]: DashboardFilters uses useSearchParams + router.push for URL-driven state — no local state
+- [Phase 03-dashboard-and-filters]: Suspense wraps DashboardFilters to satisfy Next.js 16 CSR bailout requirement in production builds
+- [Phase 03-dashboard-and-filters]: Dashboard page calls getDashboardStats() directly — Server Component can access DB layer without HTTP fetch
 
 ### Pending Todos
 
@@ -96,6 +100,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T16:20:30.399Z
-Stopped at: Completed 03-03-PLAN.md — awaiting checkpoint:human-verify (Task 3)
+Last session: 2026-03-22T16:26:10.606Z
+Stopped at: Completed 03-03-PLAN.md
 Resume file: None
