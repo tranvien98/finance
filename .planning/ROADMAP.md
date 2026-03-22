@@ -32,9 +32,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. User can log out and is returned to the login page
   4. User can store and update their OpenRouter API key in settings; it is not visible in plain text after saving
   5. Development seed script runs without error and populates the database with usable demo data
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
+- [ ] 01-01-PLAN.md — Project scaffold, DB connection, Mongoose models, .env.example
+- [ ] 01-02-PLAN.md — NextAuth credentials provider, auth UI, middleware, protected routes
+- [ ] 01-03-PLAN.md — AES-256-GCM encryption, settings API, settings page UI
+- [ ] 01-04-PLAN.md — Seed data script with Vietnamese data, error logging utility
 
 ### Phase 2: Expense Management
 **Goal**: Users can fully manage their expenses and custom categories through the web UI — the core data model is live and all manual entry workflows are complete
@@ -128,7 +132,7 @@ Note: Phase 4 depends only on Phase 1 (not Phase 2 or 3), and Phase 6 depends on
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/? | Not started | - |
+| 1. Foundation | 0/4 | Planning complete | - |
 | 2. Expense Management | 0/? | Not started | - |
 | 3. Dashboard and Filters | 0/? | Not started | - |
 | 4. AI Classification | 0/? | Not started | - |
