@@ -2,9 +2,10 @@
 phase: 2
 slug: expense-management
 status: draft
-nyquist_compliant: false
+nyquist_compliant: true
 wave_0_complete: false
 created: 2026-03-22
+updated: 2026-03-22
 ---
 
 # Phase 2 — Validation Strategy
@@ -17,20 +18,36 @@ created: 2026-03-22
 
 | Property | Value |
 |----------|-------|
-| **Framework** | jest / vitest (Next.js project — check package.json) |
-| **Config file** | jest.config.ts or vitest.config.ts |
-| **Quick run command** | `npm test -- --passWithNoTests` |
-| **Full suite command** | `npm test` |
-| **Estimated runtime** | ~30 seconds |
+| **Framework** | vitest |
+| **Config file** | vitest.config.ts |
+| **Quick run command** | `npx vitest run tests/api/` |
+| **Full suite command** | `npx vitest run` |
+| **Estimated runtime** | ~15 seconds |
 
 ---
 
 ## Sampling Rate
 
-- **After every task commit:** Run `npm test -- --passWithNoTests`
-- **After every plan wave:** Run `npm test`
+- **After every task commit:** Run `npx vitest run tests/api/`
+- **After every plan wave:** Run `npx vitest run`
 - **Before `/gsd:verify-work`:** Full suite must be green
 - **Max feedback latency:** 30 seconds
+
+---
+
+## Wave 0 Plan
+
+**Plan:** `02-00-PLAN.md` — Test Infrastructure Scaffold
+
+| Artifact | Purpose | Status |
+|----------|---------|--------|
+| `vitest.config.ts` | Test runner config with @/* alias | pending |
+| `tests/helpers/mock-db.ts` | MongoMemoryServer lifecycle + auth mock | pending |
+| `tests/api/categories.test.ts` | RED stubs for EXPN-05, EXPN-06 (8 tests) | pending |
+| `tests/api/expenses.test.ts` | RED stubs for EXPN-01 through EXPN-04 (12 tests) | pending |
+| `npm install vitest mongodb-memory-server` | Dev dependencies | pending |
+
+*Wave 0 must be committed before any implementation tasks begin.*
 
 ---
 
@@ -38,25 +55,15 @@ created: 2026-03-22
 
 | Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
-| 2-01-01 | 01 | 1 | EXPN-05 | unit | `npm test -- --testPathPattern=category` | ❌ W0 | ⬜ pending |
-| 2-01-02 | 01 | 1 | EXPN-05 | unit | `npm test -- --testPathPattern=category` | ❌ W0 | ⬜ pending |
-| 2-01-03 | 01 | 1 | EXPN-06 | unit | `npm test -- --testPathPattern=category` | ❌ W0 | ⬜ pending |
-| 2-02-01 | 02 | 1 | EXPN-01 | unit | `npm test -- --testPathPattern=expense` | ❌ W0 | ⬜ pending |
-| 2-02-02 | 02 | 1 | EXPN-02 | unit | `npm test -- --testPathPattern=expense` | ❌ W0 | ⬜ pending |
-| 2-02-03 | 02 | 1 | EXPN-03 | unit | `npm test -- --testPathPattern=expense` | ❌ W0 | ⬜ pending |
-| 2-02-04 | 02 | 1 | EXPN-04 | unit | `npm test -- --testPathPattern=expense` | ❌ W0 | ⬜ pending |
+| 2-00-01 | 00 | 0 | ALL | infra | `npx vitest --version` | pending W0 | pending |
+| 2-00-02 | 00 | 0 | ALL | infra | `test -f tests/helpers/mock-db.ts` | pending W0 | pending |
+| 2-01-01 | 01 | 1 | EXPN-05 | structural | `ls src/components/ui/*.tsx` | pending | pending |
+| 2-01-02 | 01 | 1 | EXPN-05 | unit | `npx vitest run tests/api/categories.test.ts` | pending W0 | pending |
+| 2-01-03 | 01 | 1 | EXPN-06 | unit | `npx vitest run tests/api/categories.test.ts` | pending W0 | pending |
+| 2-02-01 | 02 | 1 | EXPN-01 | unit | `npx vitest run tests/api/expenses.test.ts` | pending W0 | pending |
+| 2-02-02 | 02 | 1 | EXPN-02-04 | unit | `npx vitest run tests/api/expenses.test.ts` | pending W0 | pending |
 
-*Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
-
----
-
-## Wave 0 Requirements
-
-- [ ] `__tests__/api/categories.test.ts` — stubs for EXPN-05, EXPN-06
-- [ ] `__tests__/api/expenses.test.ts` — stubs for EXPN-01, EXPN-02, EXPN-03, EXPN-04
-- [ ] `__tests__/setup.ts` — shared test fixtures (mock mongoose, mock auth)
-
-*Wave 0 must be committed before any implementation tasks begin.*
+*Status: pending -- green -- red -- flaky*
 
 ---
 
@@ -73,11 +80,11 @@ created: 2026-03-22
 
 ## Validation Sign-Off
 
-- [ ] All tasks have `<automated>` verify or Wave 0 dependencies
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all MISSING references
-- [ ] No watch-mode flags
-- [ ] Feedback latency < 30s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] All tasks have `<automated>` verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all MISSING references
+- [x] No watch-mode flags
+- [x] Feedback latency < 30s
+- [x] `nyquist_compliant: true` set in frontmatter
 
-**Approval:** pending
+**Approval:** approved (Wave 0 plan 02-00-PLAN.md created)

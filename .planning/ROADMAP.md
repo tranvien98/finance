@@ -50,9 +50,14 @@ Plans:
   3. User can edit an existing expense and see the updated values immediately
   4. User can delete an expense and it disappears from the list
   5. User can create, rename, and delete custom categories; default categories (Food, Transport, Entertainment, Shopping, Health, Utilities, Housing, Other) exist on first login
-**Plans**: TBD
+**Plans**: 5 plans
 
 Plans:
+- [ ] 02-00-PLAN.md — Test infrastructure (vitest, mongodb-memory-server, RED test stubs)
+- [ ] 02-01-PLAN.md — shadcn components, Category model, Category API routes
+- [ ] 02-02-PLAN.md — Expense API routes (GET/POST/PATCH/DELETE)
+- [ ] 02-03-PLAN.md — Expenses page UI (list, create/edit dialog, delete confirmation)
+- [ ] 02-04-PLAN.md — Category manager dialog, integration, visual verification
 
 ### Phase 3: Dashboard and Filters
 **Goal**: Users can see a meaningful financial overview of their expenses — the dashboard turns raw entries into insight through aggregations, charts, and date filtering
@@ -133,7 +138,7 @@ Note: Phase 4 depends only on Phase 1 (not Phase 2 or 3), and Phase 6 depends on
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/4 | Planning complete | - |
-| 2. Expense Management | 0/? | Not started | - |
+| 2. Expense Management | 0/5 | Planning complete | - |
 | 3. Dashboard and Filters | 0/? | Not started | - |
 | 4. AI Classification | 0/? | Not started | - |
 | 5. Telegram Bot | 0/? | Not started | - |
