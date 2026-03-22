@@ -24,6 +24,7 @@ export async function GET() {
       ? maskApiKey(decrypt(user.encryptedOpenrouterKey))
       : null,
     hasTelegramBotToken: !!user.encryptedTelegramBotToken,
+    hasTelegramWebhook: !!user.telegramWebhookSecret,
   });
 }
 
