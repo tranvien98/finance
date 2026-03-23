@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 2: Expense Management** - Full expense CRUD and custom category management
 - [x] **Phase 3: Dashboard and Filters** - Analytics dashboard with charts and date filtering (completed 2026-03-22)
 - [x] **Phase 4: AI Classification** - Free-text expense parsing via OpenRouter with Vietnamese NLP (completed 2026-03-22)
-- [ ] **Phase 5: Telegram Bot** - Webhook integration turning Telegram messages into expenses
+- [x] **Phase 5: Telegram Bot** - Webhook integration turning Telegram messages into expenses (completed 2026-03-23)
 - [ ] **Phase 6: Investment Tracking** - Full investment CRUD for mutual funds, crypto, and gold
 - [ ] **Phase 7: UI Polish and Insights** - UI/UX completeness and AI-generated spending insights
 
@@ -106,7 +106,7 @@ Plans:
 Plans:
 - [x] 05-01-PLAN.md — Webhook registration and settings integration (TGBR-01, TGBR-02)
 - [x] 05-02-PLAN.md — Webhook endpoint with validation, idempotency, and async expense creation (TGBR-03, TGBR-04, TGBR-05)
-- [ ] 05-03-PLAN.md — Gap closure: wire ai-classify.ts to Phase 4 parsers, replace inline regex with parseExpenseFallback (TGBR-03, TGBR-05)
+- [x] 05-03-PLAN.md — Gap closure: wire ai-classify.ts to Phase 4 parsers, replace inline regex with parseExpenseFallback (TGBR-03, TGBR-05)
 
 ### Phase 6: Investment Tracking
 **Goal**: Users can record and review their investment portfolio alongside expenses — the financial picture is complete
@@ -148,6 +148,6 @@ Note: Phase 4 depends only on Phase 1 (not Phase 2 or 3), and Phase 6 depends on
 | 2. Expense Management | 5/5 | Complete |  |
 | 3. Dashboard and Filters | 4/4 | Complete   | 2026-03-22 |
 | 4. AI Classification | 3/3 | Complete    | 2026-03-22 |
-| 5. Telegram Bot | 2/3 | In Progress|  |
+| 5. Telegram Bot | 3/3 | Complete   | 2026-03-23 |
 | 6. Investment Tracking | 0/? | Not started | - |
 | 7. UI Polish and Insights | 0/? | Not started | - |

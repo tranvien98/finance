@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 05-02-PLAN.md
-last_updated: "2026-03-22T17:21:07.526Z"
+stopped_at: Completed 05-03-PLAN.md
+last_updated: "2026-03-23T14:16:44.497Z"
 progress:
   total_phases: 7
-  completed_phases: 4
-  total_plans: 18
-  completed_plans: 15
+  completed_phases: 5
+  total_plans: 19
+  completed_plans: 19
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Quick, frictionless expense tracking — send a Telegram message like "ate pho 50k" and it automatically creates a categorized expense entry.
-**Current focus:** Phase 05 — Telegram Bot
+**Current focus:** Phase 05 — telegram-bot
 
 ## Current Position
 
-Phase: 05 (Telegram Bot) — EXECUTING
-Plan: 2 of 2
+Phase: 05 (telegram-bot) — EXECUTING
+Plan: 2 of 3
 
 ## Performance Metrics
 
@@ -58,6 +58,10 @@ Plan: 2 of 2
 | Phase 03-dashboard-and-filters P03 | 10min | 3 tasks | 2 files |
 | Phase 05-telegram-bot P05-01 | 1min | 3 tasks | 6 files |
 | Phase 05-telegram-bot P05-02 | 5min | 2 tasks | 3 files |
+| Phase 4 P04-01 | 2 min | 3 tasks | 3 files |
+| Phase 4 P04-02 | 2 min | 1 tasks | 1 files |
+| Phase 4 P04-03 | 2 min | 2 tasks | 2 files |
+| Phase 05-telegram-bot P05-03 | 2min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -95,6 +99,145 @@ Recent decisions affecting current work:
 - [Phase 05-telegram-bot]: Dynamic import of ai-classify inside after() with .catch() fallback — route loads and works even if Phase 4 has not delivered src/lib/ai-classify.ts
 - [Phase 05-telegram-bot]: Two-level idempotency for Telegram webhook: pre-response DB check (fast path) + duplicate key 11000 catch (race condition guard)
 - [Phase 05-telegram-bot]: ai-classify.ts stub created so vi.mock() can intercept dynamic import in Vitest tests; Phase 4 replaces entire file
+- [Phase 4]: ---
+
+phase: 04-ai-classification
+plan: 04-01
+subsystem: ai-classification
+tags: [ai, backend, service, openrouter]
+requires: []
+provides: [ai parser service, fallback parser service, memory cache]
+affects: []
+tech-stack.added: []
+tech-stack.patterns: [in-memory caching, few-shot prompting]
+key-files.created:
+
+  - src/lib/cache.ts
+  - src/lib/fallback-parser.ts
+  - src/lib/ai-parser.ts
+
+key-files.modified: []
+key-decisions:
+
+  - Use in-memory LRU cache to store expense text matching
+  - Default fallback parser categorizes everything to "Other"
+
+requirements: [AICL-01, AICL-02, AICL-03, AICL-04]
+---
+
+# Phase 04 Plan 01: Core Backend AI Services Summary
+
+Implemented the core services necessary for AI classification: an in-memory session cache, a rule-based fallback regex parser for Vietnamese shorthand, and an OpenRouter-powered few-shot prompt executor.
+
+- [Phase 4]: ---
+
+phase: 04-ai-classification
+plan: 04-02
+subsystem: ai-classification
+tags: [ai, backend, api, route]
+requires: [ai parser service, fallback parser service, memory cache]
+provides: [POST /api/expenses/classify endpoint]
+affects: []
+tech-stack.added: []
+tech-stack.patterns: [error resilience, auth-gated endpoints]
+key-files.created:
+
+  - src/app/api/expenses/classify/route.ts
+
+key-files.modified: []
+key-decisions:
+
+  - Checked cache before parsing API key to minimize latency and DB hits
+  - Implemented deterministic retry fallback on API failures
+
+requirements: [AICL-01, AICL-03, AICL-04, AICL-05]
+---
+
+# Phase 04 Plan 02: Classification API Endpoint Summary
+
+Built the `POST /api/expenses/classify` secure route to expose the AI parser to the front-end clients, incorporating caching, retries, and the fallback parser.
+
+- [Phase 4]: ---
+
+phase: 04-ai-classification
+plan: 04-03
+subsystem: ui-expenses
+tags: [ui, frontend, component, quick-add]
+requires: [POST /api/expenses/classify endpoint]
+provides: [Quick Add UI component]
+affects: [src/app/(dashboard)/expenses/page.tsx]
+tech-stack.added: []
+tech-stack.patterns: [loading states, toast notifications]
+key-files.created:
+
+  - src/components/expenses/quick-add.tsx
+
+key-files.modified:
+
+  - src/app/(dashboard)/expenses/page.tsx
+
+key-decisions:
+
+  - Quick Add handles both classification and saving sequentially, abstracting it from the user
+  - Used Sonner for elegant loading, success, and error notifications
+
+requirements: [AICL-01, AICL-05]
+---
+
+# Phase 04 Plan 03: Web UI Quick Add Integration Summary
+
+Implemented the `QuickAdd` component to allow users to rapidly log expenses via natural language right from the expenses dashboard. It handles API communication with the backend classifier, state management during loading, and notifies the user upon success or failure.
+
+- [Phase 05-telegram-bot]: classifyExpense never throws — always returns a result (AI or fallback) because webhook outer catch swallows errors silently
+- [Phase 05-telegram-bot]: parseExpenseFallback imported statically in webhook — pure function, no loading risk, handles full Vietnamese shorthand set
+
+## Execution Details
+
+- **Duration:** 2 min
+- **Started:** 2026-03-22
+- **Completed:** 2026-03-22
+- **Tasks Complete:** 2
+- **Files Modified:** 2
+
+## Deviations from Plan
+
+None - plan executed exactly as written.
+
+## Self-Check: PASSED
+
+Phase complete, ready for next step.
+
+## Execution Details
+
+- **Duration:** 2 min
+- **Started:** 2026-03-22
+- **Completed:** 2026-03-22
+- **Tasks Complete:** 1
+- **Files Modified:** 1
+
+## Deviations from Plan
+
+None - plan executed exactly as written.
+
+## Self-Check: PASSED
+
+Ready for 04-03-PLAN.md
+
+## Execution Details
+
+- **Duration:** 2 min
+- **Started:** 2026-03-22
+- **Completed:** 2026-03-22
+- **Tasks Complete:** 3
+- **Files Modified:** 3
+
+## Deviations from Plan
+
+None - plan executed exactly as written.
+
+## Self-Check: PASSED
+
+Ready for 04-02-PLAN.md
 
 ### Pending Todos
 
@@ -107,6 +250,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T17:21:07.524Z
-Stopped at: Completed 05-02-PLAN.md
+Last session: 2026-03-23T14:16:44.495Z
+Stopped at: Completed 05-03-PLAN.md
 Resume file: None
