@@ -10,6 +10,7 @@ import { DashboardFilters } from '@/components/dashboard/dashboard-filters';
 import { StatCard } from '@/components/dashboard/stat-card';
 import { CategoryPieChart } from '@/components/dashboard/category-pie-chart';
 import { ExpenseLineChart } from '@/components/dashboard/expense-line-chart';
+import { AiInsightsCard } from '@/components/dashboard/ai-insights-card';
 
 export default async function DashboardPage({
   searchParams,
@@ -66,6 +67,8 @@ export default async function DashboardPage({
           value={current.totalInvestments}
         />
       </div>
+
+      <AiInsightsCard />
 
       <div className="grid gap-4 lg:grid-cols-2">
         <CategoryPieChart data={current.categoryBreakdown} />
