@@ -5,6 +5,7 @@ import Expense from '@/models/expense.model';
 import Category from '@/models/category.model';
 import { decrypt } from '@/lib/encryption';
 import { sendMessage } from '@/lib/telegram';
+import { parseExpenseFallback } from '@/lib/fallback-parser';
 // NOTE: Do NOT import classifyExpense at the top level.
 // Phase 4 (ai-classify module) may not be delivered yet.
 // The import is done dynamically inside after() with a .catch() fallback.
@@ -98,14 +99,9 @@ export async function POST(req: Request) {
         const apiKey = decrypt(encryptedApiKey);
         parsed = await classifyExpense(messageText, categoryNames, apiKey);
       } else {
-        // No API key OR ai-classify module not available -- use regex fallback
-        const amountMatch = messageText.match(/(\d+)\s*k/i);
-        const amount = amountMatch ? parseInt(amountMatch[1]) * 1000 : 0;
-        parsed = {
-          amount: amount || 0,
-          category: 'Other',
-          description: messageText,
-        };
+        // No API key OR ai-classify module not available -- use Phase 4 fallback parser
+        // Handles k, tr, trieu, ngan suffixes and bare numbers (not just "Nk" pattern)
+        parsed = parseExpenseFallback(messageText);
       }
 
       if (parsed.amount <= 0) {
