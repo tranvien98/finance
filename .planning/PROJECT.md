@@ -21,18 +21,21 @@ Quick, frictionless expense tracking — send a Telegram message like "ate pho 5
 - [x] Debounce AI calls, retry on API failure, error logging — Validated in Phase 4: AI Classification
 - [x] User can CRUD investments (mutual funds, crypto, gold) with asset type, amount, buy price, quantity, date — Validated in Phase 6: Investment Tracking
 - [x] Dashboard shows monthly overview: total expenses, total investments — Validated in Phase 6: Investment Tracking
+- [x] Dashboard integrates insights endpoint (DASH-05) — Validated in Phase 7
+- [x] Next.js loading.tsx skeletons (UIUX-04) — Validated in Phase 7
+- [x] Sonner Toasts for CRUD errors (UIUX-03) — Validated in Phase 7
+- [x] Responsive layout card conversions (UIUX-02) — Validated in Phase 7
+- [ ] Dark Mode support (UIUX-01) — Skipped
 
 ### Active
 
 - [ ] Dashboard shows pie chart by expense category and line chart over time
 - [ ] Dashboard shows month-over-month comparison with % change
-- [ ] Dashboard shows simple insights
 - [ ] User can filter by month, year, or custom date range
 - [x] User can input Telegram Bot Token to receive messages — Validated in Phase 5: Telegram Bot
 - [x] Telegram webhook receives messages, parses them, and auto-creates expenses via AI — Validated in Phase 5: Telegram Bot
 - [x] User can store OpenRouter API key (encrypted with AES-256) — Validated in Phase 5: Telegram Bot
 - [x] Encrypt/decrypt helper functions for API key storage — Validated in Phase 5: Telegram Bot
-- [ ] Dark mode, responsive design, loading skeletons, toast notifications
 - [ ] Seed data for development/demo
 
 ### Out of Scope
