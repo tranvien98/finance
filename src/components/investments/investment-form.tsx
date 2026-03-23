@@ -22,7 +22,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { ASSET_TYPES } from '@/models/investment.model';
+import { ASSET_TYPES } from '@/lib/investments';
 import type { SerializedInvestment } from './investment-list';
 import { ASSET_TYPE_LABELS } from './investment-list';
 

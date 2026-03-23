@@ -1,7 +1,6 @@
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
-export const ASSET_TYPES = ['mutual_fund', 'crypto', 'gold'] as const;
-export type AssetType = (typeof ASSET_TYPES)[number];
+import { ASSET_TYPES, AssetType } from '@/lib/investments';
 
 export interface IInvestment extends Document {
   _id: mongoose.Types.ObjectId;

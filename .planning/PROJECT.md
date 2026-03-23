@@ -19,11 +19,11 @@ Quick, frictionless expense tracking — send a Telegram message like "ate pho 5
 - [x] Rule-based fallback when AI classification fails — Validated in Phase 4: AI Classification
 - [x] AI results are cached to reduce API costs — Validated in Phase 4: AI Classification
 - [x] Debounce AI calls, retry on API failure, error logging — Validated in Phase 4: AI Classification
+- [x] User can CRUD investments (mutual funds, crypto, gold) with asset type, amount, buy price, quantity, date — Validated in Phase 6: Investment Tracking
+- [x] Dashboard shows monthly overview: total expenses, total investments — Validated in Phase 6: Investment Tracking
 
 ### Active
 
-- [ ] User can CRUD investments (mutual funds, crypto, gold) with asset type, amount, buy price, quantity, date
-- [ ] Dashboard shows monthly overview: total expenses, total investments
 - [ ] Dashboard shows pie chart by expense category and line chart over time
 - [ ] Dashboard shows month-over-month comparison with % change
 - [ ] Dashboard shows simple insights
@@ -87,4 +87,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-23 after Phase 5 completion*
+*Last updated: 2026-03-23 after Phase 6 completion*

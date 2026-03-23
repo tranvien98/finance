@@ -14,7 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import type { AssetType } from '@/models/investment.model';
+import type { AssetType } from '@/lib/investments';
 import { InvestmentForm } from './investment-form';
 import { DeleteInvestmentDialog } from './delete-investment-dialog';
 
