@@ -83,7 +83,6 @@ export function AuthForm() {
         return;
       }
 
-      // Auto sign-in after registration
       const signInResult = await signIn('credentials', {
         redirect: false,
         email: data.email,
@@ -103,10 +102,10 @@ export function AuthForm() {
   };
 
   return (
-    <Card className="w-full max-w-[400px] bg-zinc-900 border-zinc-800">
+    <Card className="w-full max-w-[400px] bg-white border-gray-200 shadow-lg">
       <CardHeader className="text-center space-y-1.5 pb-4">
-        <h1 className="text-[28px] font-semibold tracking-tight">Finance</h1>
-        <p className="text-sm text-muted-foreground">
+        <h1 className="text-[28px] font-semibold tracking-tight text-gray-900">Finance</h1>
+        <p className="text-sm text-gray-500">
           Track expenses. Stay in control.
         </p>
       </CardHeader>
@@ -129,7 +128,7 @@ export function AuthForm() {
                   {...signInForm.register('email')}
                 />
                 {signInForm.formState.errors.email && (
-                  <p className="text-sm text-red-500">{signInForm.formState.errors.email.message}</p>
+                  <p className="text-sm text-red-600">{signInForm.formState.errors.email.message}</p>
                 )}
               </div>
               <div className="space-y-2">
@@ -142,11 +141,11 @@ export function AuthForm() {
                   {...signInForm.register('password')}
                 />
                 {signInForm.formState.errors.password && (
-                  <p className="text-sm text-red-500">{signInForm.formState.errors.password.message}</p>
+                  <p className="text-sm text-red-600">{signInForm.formState.errors.password.message}</p>
                 )}
               </div>
               {serverError && (
-                <p className="text-sm text-red-500">{serverError}</p>
+                <p className="text-sm text-red-600">{serverError}</p>
               )}
               <Button
                 type="submit"
@@ -177,7 +176,7 @@ export function AuthForm() {
                   {...signUpForm.register('email')}
                 />
                 {signUpForm.formState.errors.email && (
-                  <p className="text-sm text-red-500">{signUpForm.formState.errors.email.message}</p>
+                  <p className="text-sm text-red-600">{signUpForm.formState.errors.email.message}</p>
                 )}
               </div>
               <div className="space-y-2">
@@ -190,7 +189,7 @@ export function AuthForm() {
                   {...signUpForm.register('password')}
                 />
                 {signUpForm.formState.errors.password && (
-                  <p className="text-sm text-red-500">{signUpForm.formState.errors.password.message}</p>
+                  <p className="text-sm text-red-600">{signUpForm.formState.errors.password.message}</p>
                 )}
               </div>
               <div className="space-y-2">
@@ -203,11 +202,11 @@ export function AuthForm() {
                   {...signUpForm.register('confirmPassword')}
                 />
                 {signUpForm.formState.errors.confirmPassword && (
-                  <p className="text-sm text-red-500">{signUpForm.formState.errors.confirmPassword.message}</p>
+                  <p className="text-sm text-red-600">{signUpForm.formState.errors.confirmPassword.message}</p>
                 )}
               </div>
               {serverError && (
-                <p className="text-sm text-red-500">{serverError}</p>
+                <p className="text-sm text-red-600">{serverError}</p>
               )}
               <Button
                 type="submit"

@@ -149,5 +149,5 @@ Note: Phase 4 depends only on Phase 1 (not Phase 2 or 3), and Phase 6 depends on
 | 3. Dashboard and Filters | 4/4 | Complete   | 2026-03-22 |
 | 4. AI Classification | 3/3 | Complete    | 2026-03-22 |
 | 5. Telegram Bot | 3/3 | Complete   | 2026-03-23 |
-| 6. Investment Tracking | 0/? | Not started | - |
+| 6. Investment Tracking | 0/3 | Planned    |  |
 | 7. UI Polish and Insights | 0/? | Not started | - |

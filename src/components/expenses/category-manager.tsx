@@ -203,10 +203,12 @@ export function CategoryManager({ open, onOpenChange }: CategoryManagerProps) {
                       <>
                         <span className="flex-1 text-sm text-gray-900">{category.name}</span>
                         {category.isDefault ? (
-                          <Lock
-                            className="h-4 w-4 text-gray-300 flex-shrink-0"
+                          <span
+                            className="flex-shrink-0"
                             title="Default categories cannot be deleted"
-                          />
+                          >
+                            <Lock className="h-4 w-4 text-gray-300" />
+                          </span>
                         ) : (
                           <div className="flex items-center gap-1 flex-shrink-0">
                             <Button

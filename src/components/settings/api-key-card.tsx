@@ -49,7 +49,6 @@ export function ApiKeyCard() {
     setMessage(null);
 
     try {
-      // Step 1: Validate
       const validateRes = await fetch('/api/settings/validate-key', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -66,7 +65,6 @@ export function ApiKeyCard() {
         return;
       }
 
-      // Step 2: Save
       const saveRes = await fetch('/api/settings', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -112,11 +110,11 @@ export function ApiKeyCard() {
       collapsed={
         hasKey && maskedKey ? (
           <div className="flex items-center gap-2">
-            <span className="text-sm text-zinc-400">OpenRouter API Key</span>
+            <span className="text-sm text-gray-500">OpenRouter API Key</span>
             <Badge variant="secondary">{maskedKey}</Badge>
           </div>
         ) : (
-          <Badge variant="secondary" className="text-zinc-500">No API key saved</Badge>
+          <Badge variant="secondary" className="text-gray-400">No API key saved</Badge>
         )
       }
     >
@@ -126,7 +124,7 @@ export function ApiKeyCard() {
             <Input
               value={revealed ? maskedKey : '••••••••••••••••'}
               readOnly
-              className="flex-1 bg-zinc-800 border-zinc-700"
+              className="flex-1 bg-gray-50 border-gray-200"
             />
             <Button
               variant="ghost"
@@ -135,7 +133,7 @@ export function ApiKeyCard() {
               className="shrink-0"
             >
               {revealed ? (
-                <EyeOff className="h-4 w-4 text-purple-400" />
+                <EyeOff className="h-4 w-4 text-purple-600" />
               ) : (
                 <Eye className="h-4 w-4" />
               )}
@@ -149,10 +147,10 @@ export function ApiKeyCard() {
             placeholder="sk-or-v1-..."
             value={apiKey}
             onChange={(e) => setApiKey(e.target.value)}
-            className="bg-zinc-800 border-zinc-700"
+            className="bg-gray-50 border-gray-200"
           />
           {message && (
-            <p className={`text-sm ${message.type === 'success' ? 'text-green-500' : 'text-red-500'}`}>
+            <p className={`text-sm ${message.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
               {message.text}
             </p>
           )}

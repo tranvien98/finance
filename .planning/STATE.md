@@ -4,11 +4,11 @@ milestone: v1.0
 milestone_name: milestone
 status: unknown
 stopped_at: Completed 05-03-PLAN.md
-last_updated: "2026-03-23T14:27:58.912Z"
+last_updated: "2026-03-23T15:15:58.358Z"
 progress:
   total_phases: 7
   completed_phases: 5
-  total_plans: 19
+  total_plans: 22
   completed_plans: 19
 ---
 
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-22)
 
 **Core value:** Quick, frictionless expense tracking — send a Telegram message like "ate pho 50k" and it automatically creates a categorized expense entry.
-**Current focus:** Phase 05 — telegram-bot
+**Current focus:** Phase 6 — investment-tracking
 
 ## Current Position
 
-Phase: 6
-Plan: Not started
+Phase: 6 (investment-tracking) — EXECUTING
+Plan: 1 of 3
 
 ## Performance Metrics
 
