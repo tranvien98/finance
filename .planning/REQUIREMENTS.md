@@ -37,11 +37,11 @@
 
 ### AI Classification
 
-- [ ] **AICL-01**: AI classifies free-text input into structured expense (amount, category, description) via OpenRouter API
-- [ ] **AICL-02**: AI understands Vietnamese shorthand ("50k" = 50,000 VND, "trieu" = million)
-- [ ] **AICL-03**: Rule-based fallback parses common formats when AI is unavailable or fails
-- [ ] **AICL-04**: AI classification results are cached by normalized input to reduce API costs
-- [ ] **AICL-05**: AI calls are debounced and retried on failure
+- [x] **AICL-01**: AI classifies free-text input into structured expense (amount, category, description) via OpenRouter API
+- [x] **AICL-02**: AI understands Vietnamese shorthand ("50k" = 50,000 VND, "trieu" = million)
+- [x] **AICL-03**: Rule-based fallback parses common formats when AI is unavailable or fails
+- [x] **AICL-04**: AI classification results are cached by normalized input to reduce API costs
+- [x] **AICL-05**: AI calls are debounced and retried on failure
 
 ### Telegram Bot
 
@@ -143,11 +143,11 @@
 | FILT-01 | Phase 3 | Complete |
 | FILT-02 | Phase 3 | Complete |
 | FILT-03 | Phase 3 | Complete |
-| AICL-01 | Phase 4 | Pending |
-| AICL-02 | Phase 4 | Pending |
-| AICL-03 | Phase 4 | Pending |
-| AICL-04 | Phase 4 | Pending |
-| AICL-05 | Phase 4 | Pending |
+| AICL-01 | Phase 4 | Complete |
+| AICL-02 | Phase 4 | Complete |
+| AICL-03 | Phase 4 | Complete |
+| AICL-04 | Phase 4 | Complete |
+| AICL-05 | Phase 4 | Complete |
 | TGBR-01 | Phase 5 | Complete |
 | TGBR-02 | Phase 5 | Complete |
 | TGBR-03 | Phase 5 | Complete |
