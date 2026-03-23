@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 05-03-PLAN.md
-last_updated: "2026-03-23T15:15:58.358Z"
+stopped_at: Completed 06-01-PLAN.md
+last_updated: "2026-03-23T15:17:03.375Z"
 progress:
   total_phases: 7
   completed_phases: 5
   total_plans: 22
-  completed_plans: 19
+  completed_plans: 20
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-22)
 ## Current Position
 
 Phase: 6 (investment-tracking) — EXECUTING
-Plan: 1 of 3
+Plan: 2 of 3
 
 ## Performance Metrics
 
@@ -62,6 +62,7 @@ Plan: 1 of 3
 | Phase 4 P04-02 | 2 min | 1 tasks | 1 files |
 | Phase 4 P04-03 | 2 min | 2 tasks | 2 files |
 | Phase 05-telegram-bot P05-03 | 2min | 2 tasks | 2 files |
+| Phase 6 P06-01 | 5 min | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -190,6 +191,51 @@ Implemented the `QuickAdd` component to allow users to rapidly log expenses via 
 
 - [Phase 05-telegram-bot]: classifyExpense never throws — always returns a result (AI or fallback) because webhook outer catch swallows errors silently
 - [Phase 05-telegram-bot]: parseExpenseFallback imported statically in webhook — pure function, no loading risk, handles full Vietnamese shorthand set
+- [Phase 6]: ---
+
+phase: 06-investment-tracking
+plan: 06-01
+subsystem: api-investments
+tags: [api, backend, routes, investments]
+requires: [Investment model]
+provides: [GET /api/investments, POST /api/investments, PATCH /api/investments/[id], DELETE /api/investments/[id]]
+affects: []
+tech-stack.added: []
+tech-stack.patterns: [async params (Next.js 16), ownership guards]
+key-files.created:
+
+  - src/app/api/investments/route.ts
+  - src/app/api/investments/[id]/route.ts
+  - tests/api/investments.test.ts
+
+key-files.modified: []
+key-decisions:
+
+  - Strictly followed `await ctx.params` for Next.js 16 compatibility
+  - Implemented 403 Forbidden check on PATCH/DELETE to ensure cross-user data safety
+
+requirements: [INVS-01, INVS-02, INVS-03, INVS-04, INVS-05]
+---
+
+# Phase 06 Plan 01: Investment API Layer Summary
+
+Implemented the full CRUD API for investments with robust validation and security guards. Verified the implementation with a comprehensive suite of 10 integration tests.
+
+## Execution Details
+
+- **Duration:** 5 min
+- **Started:** 2026-03-23
+- **Completed:** 2026-03-23
+- **Tasks Complete:** 3
+- **Files Modified:** 3
+
+## Deviations from Plan
+
+None.
+
+## Self-Check: PASSED
+
+All tests green. API is ready for UI integration.
 
 ## Execution Details
 
@@ -250,6 +296,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-23T14:16:44.495Z
-Stopped at: Completed 05-03-PLAN.md
+Last session: 2026-03-23T15:17:03.372Z
+Stopped at: Completed 06-01-PLAN.md
 Resume file: None

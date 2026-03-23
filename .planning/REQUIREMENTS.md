@@ -53,11 +53,11 @@
 
 ### Investment Management
 
-- [ ] **INVS-01**: User can create an investment with asset type, amount, buy price, quantity, and date
-- [ ] **INVS-02**: User can view a list of their investments
-- [ ] **INVS-03**: User can edit an existing investment
-- [ ] **INVS-04**: User can delete an investment
-- [ ] **INVS-05**: Supported asset types: mutual funds, crypto, gold
+- [x] **INVS-01**: User can create an investment with asset type, amount, buy price, quantity, and date
+- [x] **INVS-02**: User can view a list of their investments
+- [x] **INVS-03**: User can edit an existing investment
+- [x] **INVS-04**: User can delete an investment
+- [x] **INVS-05**: Supported asset types: mutual funds, crypto, gold
 
 ### Settings & Security
 
@@ -153,11 +153,11 @@
 | TGBR-03 | Phase 5 | Complete |
 | TGBR-04 | Phase 5 | Complete |
 | TGBR-05 | Phase 5 | Complete |
-| INVS-01 | Phase 6 | Pending |
-| INVS-02 | Phase 6 | Pending |
-| INVS-03 | Phase 6 | Pending |
-| INVS-04 | Phase 6 | Pending |
-| INVS-05 | Phase 6 | Pending |
+| INVS-01 | Phase 6 | Complete |
+| INVS-02 | Phase 6 | Complete |
+| INVS-03 | Phase 6 | Complete |
+| INVS-04 | Phase 6 | Complete |
+| INVS-05 | Phase 6 | Complete |
 | UIUX-01 | Phase 7 | Pending |
 | UIUX-02 | Phase 7 | Pending |
 | UIUX-03 | Phase 7 | Pending |
