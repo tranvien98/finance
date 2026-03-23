@@ -28,10 +28,10 @@ Quick, frictionless expense tracking — send a Telegram message like "ate pho 5
 - [ ] Dashboard shows month-over-month comparison with % change
 - [ ] Dashboard shows simple insights
 - [ ] User can filter by month, year, or custom date range
-- [ ] User can input Telegram Bot Token to receive messages
-- [ ] Telegram webhook receives messages, parses them, and auto-creates expenses via AI
-- [ ] User can store OpenRouter API key (encrypted with AES-256)
-- [ ] Encrypt/decrypt helper functions for API key storage
+- [x] User can input Telegram Bot Token to receive messages — Validated in Phase 5: Telegram Bot
+- [x] Telegram webhook receives messages, parses them, and auto-creates expenses via AI — Validated in Phase 5: Telegram Bot
+- [x] User can store OpenRouter API key (encrypted with AES-256) — Validated in Phase 5: Telegram Bot
+- [x] Encrypt/decrypt helper functions for API key storage — Validated in Phase 5: Telegram Bot
 - [ ] Dark mode, responsive design, loading skeletons, toast notifications
 - [ ] Seed data for development/demo
 
@@ -87,4 +87,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after Phase 4 completion*
+*Last updated: 2026-03-23 after Phase 5 completion*
