@@ -1,6 +1,7 @@
 import { auth } from '@/lib/auth';
 import { dbConnect } from '@/lib/db';
-import Investment, { ASSET_TYPES } from '@/models/investment.model';
+import Investment from '@/models/investment.model';
+import { ASSET_TYPES } from '@/lib/investments';
 import { z } from 'zod';
 
 const createInvestmentSchema = z.object({

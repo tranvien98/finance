@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { GET } from '@/app/api/insights/route';
 import { auth } from '@/lib/auth';
-import dbConnect from '@/lib/db';
+import { dbConnect } from '@/lib/db';
 import { getDashboardStats } from '@/lib/dashboard-aggregations';
 import User from '@/models/user.model';
 

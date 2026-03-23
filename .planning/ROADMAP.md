@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Dashboard and Filters** - Analytics dashboard with charts and date filtering (completed 2026-03-22)
 - [x] **Phase 4: AI Classification** - Free-text expense parsing via OpenRouter with Vietnamese NLP (completed 2026-03-22)
 - [x] **Phase 5: Telegram Bot** - Webhook integration turning Telegram messages into expenses (completed 2026-03-23)
-- [ ] **Phase 6: Investment Tracking** - Full investment CRUD for mutual funds, crypto, and gold
+- [x] **Phase 6: Investment Tracking** - Full investment CRUD for mutual funds, crypto, and gold (completed 2026-03-23)
 - [ ] **Phase 7: UI Polish and Insights** - UI/UX completeness and AI-generated spending insights
 
 ## Phase Details
@@ -117,9 +117,10 @@ Plans:
   2. User can view a list of all their investment entries
   3. User can edit an existing investment and see updated values immediately
   4. User can delete an investment and it is removed from the list and dashboard totals
-**Plans**: TBD
-
 Plans:
+- [x] 06-01-PLAN.md — Investment API layer (CRUD routes and integration tests)
+- [x] 06-02-PLAN.md — UI Foundation (Investments page and responsive list component)
+- [x] 06-03-PLAN.md — CRUD Components (Investment form and deletion dialogs)
 
 ### Phase 7: UI Polish and Insights
 **Goal**: The app feels complete and trustworthy to use daily — every screen handles loading, empty, and error states gracefully, and AI-generated insights add value to the dashboard
@@ -149,5 +150,5 @@ Note: Phase 4 depends only on Phase 1 (not Phase 2 or 3), and Phase 6 depends on
 | 3. Dashboard and Filters | 4/4 | Complete   | 2026-03-22 |
 | 4. AI Classification | 3/3 | Complete    | 2026-03-22 |
 | 5. Telegram Bot | 3/3 | Complete   | 2026-03-23 |
-| 6. Investment Tracking | 2/3 | In Progress|  |
-| 7. UI Polish and Insights | 0/? | Not started | - |
+| 6. Investment Tracking | 3/3 | Complete    | 2026-03-23 |
+| 7. UI Polish and Insights | 0/2 | Planned    |  |
