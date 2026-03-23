@@ -126,7 +126,7 @@ function ChartTooltipContent({
     nameKey?: string
     labelKey?: string
     payload?: any[]
-  }) {
+  } & any) {
   const { config } = useChart()
 
   const tooltipLabel = React.useMemo(() => {
