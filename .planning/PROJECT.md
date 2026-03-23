@@ -12,28 +12,27 @@ Quick, frictionless expense tracking — send a Telegram message like "ate pho 5
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] User can sign up, log in, log out with JWT sessions (NextAuth) — Validated in Phase 1
+- [x] User can CRUD expenses with amount, category, note, date — Validated in Phase 2
+- [x] User can create and manage custom expense categories — Validated in Phase 2
+- [x] AI classifies expenses from free-text input (extract amount, category, description) — Validated in Phase 4: AI Classification
+- [x] Rule-based fallback when AI classification fails — Validated in Phase 4: AI Classification
+- [x] AI results are cached to reduce API costs — Validated in Phase 4: AI Classification
+- [x] Debounce AI calls, retry on API failure, error logging — Validated in Phase 4: AI Classification
 
 ### Active
 
-- [ ] User can sign up, log in, log out with JWT sessions (NextAuth)
-- [ ] User can CRUD expenses with amount, category, note, date
-- [ ] User can create and manage custom expense categories
 - [ ] User can CRUD investments (mutual funds, crypto, gold) with asset type, amount, buy price, quantity, date
 - [ ] Dashboard shows monthly overview: total expenses, total investments
 - [ ] Dashboard shows pie chart by expense category and line chart over time
 - [ ] Dashboard shows month-over-month comparison with % change
-- [ ] Dashboard highlights simple insights
+- [ ] Dashboard shows simple insights
 - [ ] User can filter by month, year, or custom date range
-- [ ] AI classifies expenses from free-text input (extract amount, category, description)
-- [ ] Rule-based fallback when AI classification fails
-- [ ] AI results are cached to reduce API costs
 - [ ] User can input Telegram Bot Token to receive messages
 - [ ] Telegram webhook receives messages, parses them, and auto-creates expenses via AI
 - [ ] User can store OpenRouter API key (encrypted with AES-256)
 - [ ] Encrypt/decrypt helper functions for API key storage
 - [ ] Dark mode, responsive design, loading skeletons, toast notifications
-- [ ] Debounce AI calls, retry on API failure, error logging
 - [ ] Seed data for development/demo
 
 ### Out of Scope
@@ -88,4 +87,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after initialization*
+*Last updated: 2026-03-22 after Phase 4 completion*
