@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
 import { setupTestDB, teardownTestDB, clearCollections, mockSession } from '../helpers/mock-db';
+import Category from '@/models/category.model';
 
 // Route handler imports will fail until Plan 01 creates the files — that's the RED state
 // These imports are wrapped so the test file itself loads without crashing
@@ -10,6 +11,7 @@ let PATCH: Function, DELETE: Function;
 beforeAll(async () => {
   await setupTestDB();
   mockSession({ user: { id: '507f1f77bcf86cd799439011', email: 'test@test.com' } });
+  await Category.init();
 
   // Dynamic imports so file compiles even before route files exist
   try {

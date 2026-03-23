@@ -11,20 +11,21 @@ export function mockSession(session: { user: { id: string; email: string } } | n
   currentSession = session;
 }
 
+// Mock auth() to return currentSession
+vi.mock('@/lib/auth', () => ({
+  auth: vi.fn(() => Promise.resolve(currentSession)),
+}));
+
+// Mock dbConnect() to no-op (already connected via MongoMemoryServer)
+vi.mock('@/lib/db', () => ({
+  dbConnect: vi.fn(() => Promise.resolve(mongoose)),
+}));
+
 export async function setupTestDB() {
   mongod = await MongoMemoryServer.create();
   const uri = mongod.getUri();
   await mongoose.connect(uri);
 
-  // Mock auth() to return currentSession
-  vi.mock('@/lib/auth', () => ({
-    auth: vi.fn(() => Promise.resolve(currentSession)),
-  }));
-
-  // Mock dbConnect() to no-op (already connected via MongoMemoryServer)
-  vi.mock('@/lib/db', () => ({
-    dbConnect: vi.fn(() => Promise.resolve(mongoose)),
-  }));
 }
 
 export async function teardownTestDB() {
