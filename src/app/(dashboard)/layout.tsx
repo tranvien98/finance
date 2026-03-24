@@ -27,7 +27,7 @@ function SidebarContent({ pathname, email }: { pathname: string; email?: string 
   return (
     <>
       <div className="p-6">
-        <h2 className="text-xl font-semibold tracking-tight text-gray-900">Finance</h2>
+        <h2 className="text-xl font-semibold tracking-tight text-foreground">Finance</h2>
       </div>
       <nav className="flex-1 px-3 space-y-1">
         {navItems.map((item) => {
@@ -39,8 +39,8 @@ function SidebarContent({ pathname, email }: { pathname: string; email?: string 
               className={cn(
                 'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
                 isActive
-                  ? 'bg-purple-50 text-purple-700'
-                  : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                  ? 'bg-primary/10 text-primary'
+                  : 'text-muted-foreground hover:bg-muted hover:text-foreground'
               )}
             >
               <item.icon className="h-4 w-4" />
@@ -49,14 +49,14 @@ function SidebarContent({ pathname, email }: { pathname: string; email?: string 
           );
         })}
       </nav>
-      <div className="border-t border-gray-200 p-4 space-y-3">
+      <div className="border-t border-border p-4 space-y-3">
         {email && (
-          <p className="text-xs text-gray-500 truncate px-1">{email}</p>
+          <p className="text-xs text-muted-foreground truncate px-1">{email}</p>
         )}
         <Button
           variant="ghost"
           size="sm"
-          className="w-full justify-start text-red-500 hover:text-red-600 hover:bg-red-50"
+          className="w-full justify-start text-destructive hover:text-destructive hover:bg-destructive/10"
           onClick={() => signOut({ callbackUrl: '/auth' })}
         >
           <LogOut className="mr-2 h-4 w-4" />
@@ -73,9 +73,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-background">
       {/* Desktop sidebar */}
-      <aside className="hidden lg:flex w-[240px] flex-col border-r border-gray-200 bg-white">
+      <aside className="hidden lg:flex w-[240px] flex-col border-r border-border bg-card">
         <SidebarContent pathname={pathname} email={session?.user?.email ?? undefined} />
       </aside>
 
@@ -86,9 +86,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             className="absolute inset-0 bg-black/30"
             onClick={() => setMobileOpen(false)}
           />
-          <aside className="relative w-[240px] h-full flex flex-col bg-white border-r border-gray-200 shadow-xl">
+          <aside className="relative w-[240px] h-full flex flex-col bg-card border-r border-border shadow-xl">
             <button
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-700"
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
               onClick={() => setMobileOpen(false)}
             >
               <X className="h-5 w-5" />
@@ -101,11 +101,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       {/* Main content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Mobile header */}
-        <header className="lg:hidden flex items-center gap-3 border-b border-gray-200 bg-white px-4 py-3">
-          <button onClick={() => setMobileOpen(true)} className="text-gray-500 hover:text-gray-700">
+        <header className="lg:hidden flex items-center gap-3 border-b border-border bg-card px-4 py-3">
+          <button onClick={() => setMobileOpen(true)} className="text-muted-foreground hover:text-foreground">
             <Menu className="h-5 w-5" />
           </button>
-          <h2 className="text-lg font-semibold text-gray-900">Finance</h2>
+          <h2 className="text-lg font-semibold text-foreground">Finance</h2>
         </header>
         <main className="flex-1 overflow-y-auto">{children}</main>
       </div>

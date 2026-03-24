@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${SERVICE}
+  namespace: ${NAMESPACE}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ${SERVICE}
+  template:
+    metadata:
+      labels:
+        app: ${SERVICE}
+    spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: ${SERVICE}
+          image: ghcr.io/${CODENAME}/${STAGE}/${SERVICE}:${TAG}
+          ports:
+            - containerPort: ${SERVICE_PORT}
+          envFrom:
+            - secretRef:
+                name: finance-env
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"

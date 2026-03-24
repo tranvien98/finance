@@ -46,7 +46,7 @@ export async function parseExpenseAI(text: string, apiKey: string): Promise<Pars
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      model: "openai/gpt-4o-mini",
+      model: process.env.AI_MODEL || "openai/gpt-4o-mini",
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: SYSTEM_PROMPT },

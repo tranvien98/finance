@@ -61,7 +61,7 @@ Top Categories: ${stats.categoryBreakdown.slice(0, 3).map(c => `${c.category} ($
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        model: "openai/gpt-4o-mini",
+        model: process.env.AI_MODEL || "openai/gpt-4o-mini",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
           { role: "user", content: promptData }

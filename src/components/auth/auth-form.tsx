@@ -10,7 +10,6 @@ import { Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const signInSchema = z.object({
@@ -102,23 +101,16 @@ export function AuthForm() {
   };
 
   return (
-    <Card className="w-full max-w-[400px] bg-white border-gray-200 shadow-lg">
-      <CardHeader className="text-center space-y-1.5 pb-4">
-        <h1 className="text-[28px] font-semibold tracking-tight text-gray-900">Finance</h1>
-        <p className="text-sm text-gray-500">
-          Track expenses. Stay in control.
-        </p>
-      </CardHeader>
-      <CardContent>
+    <div className="mx-auto flex w-full max-w-sm flex-col gap-6 rounded-lg border p-10">
         <Tabs value={activeTab} onValueChange={(v) => { setActiveTab(v); setServerError(''); }}>
-          <TabsList className="grid w-full grid-cols-2 mb-6">
+          <TabsList className="grid w-full grid-cols-2 mb-2">
             <TabsTrigger value="signin">Sign in</TabsTrigger>
             <TabsTrigger value="signup">Sign up</TabsTrigger>
           </TabsList>
 
           <TabsContent value="signin">
-            <form onSubmit={signInForm.handleSubmit(onSignIn)} className="space-y-4">
-              <div className="space-y-2">
+            <form onSubmit={signInForm.handleSubmit(onSignIn)} className="flex flex-col gap-4 pt-2">
+              <div className="grid w-full items-center gap-1.5">
                 <Label htmlFor="signin-email">Email</Label>
                 <Input
                   id="signin-email"
@@ -128,10 +120,10 @@ export function AuthForm() {
                   {...signInForm.register('email')}
                 />
                 {signInForm.formState.errors.email && (
-                  <p className="text-sm text-red-600">{signInForm.formState.errors.email.message}</p>
+                  <p className="text-sm text-destructive">{signInForm.formState.errors.email.message}</p>
                 )}
               </div>
-              <div className="space-y-2">
+              <div className="grid w-full items-center gap-1.5">
                 <Label htmlFor="signin-password">Password</Label>
                 <Input
                   id="signin-password"
@@ -141,15 +133,15 @@ export function AuthForm() {
                   {...signInForm.register('password')}
                 />
                 {signInForm.formState.errors.password && (
-                  <p className="text-sm text-red-600">{signInForm.formState.errors.password.message}</p>
+                  <p className="text-sm text-destructive">{signInForm.formState.errors.password.message}</p>
                 )}
               </div>
               {serverError && (
-                <p className="text-sm text-red-600">{serverError}</p>
+                <p className="text-sm text-destructive">{serverError}</p>
               )}
               <Button
                 type="submit"
-                className="w-full h-11 bg-purple-600 hover:bg-purple-700 text-white"
+                className="w-full"
                 disabled={signInForm.formState.isSubmitting}
               >
                 {signInForm.formState.isSubmitting ? (
@@ -165,8 +157,8 @@ export function AuthForm() {
           </TabsContent>
 
           <TabsContent value="signup">
-            <form onSubmit={signUpForm.handleSubmit(onSignUp)} className="space-y-4">
-              <div className="space-y-2">
+            <form onSubmit={signUpForm.handleSubmit(onSignUp)} className="flex flex-col gap-4 pt-2">
+              <div className="grid w-full items-center gap-1.5">
                 <Label htmlFor="signup-email">Email</Label>
                 <Input
                   id="signup-email"
@@ -176,10 +168,10 @@ export function AuthForm() {
                   {...signUpForm.register('email')}
                 />
                 {signUpForm.formState.errors.email && (
-                  <p className="text-sm text-red-600">{signUpForm.formState.errors.email.message}</p>
+                  <p className="text-sm text-destructive">{signUpForm.formState.errors.email.message}</p>
                 )}
               </div>
-              <div className="space-y-2">
+              <div className="grid w-full items-center gap-1.5">
                 <Label htmlFor="signup-password">Password</Label>
                 <Input
                   id="signup-password"
@@ -189,10 +181,10 @@ export function AuthForm() {
                   {...signUpForm.register('password')}
                 />
                 {signUpForm.formState.errors.password && (
-                  <p className="text-sm text-red-600">{signUpForm.formState.errors.password.message}</p>
+                  <p className="text-sm text-destructive">{signUpForm.formState.errors.password.message}</p>
                 )}
               </div>
-              <div className="space-y-2">
+              <div className="grid w-full items-center gap-1.5">
                 <Label htmlFor="signup-confirm">Confirm password</Label>
                 <Input
                   id="signup-confirm"
@@ -202,15 +194,15 @@ export function AuthForm() {
                   {...signUpForm.register('confirmPassword')}
                 />
                 {signUpForm.formState.errors.confirmPassword && (
-                  <p className="text-sm text-red-600">{signUpForm.formState.errors.confirmPassword.message}</p>
+                  <p className="text-sm text-destructive">{signUpForm.formState.errors.confirmPassword.message}</p>
                 )}
               </div>
               {serverError && (
-                <p className="text-sm text-red-600">{serverError}</p>
+                <p className="text-sm text-destructive">{serverError}</p>
               )}
               <Button
                 type="submit"
-                className="w-full h-11 bg-purple-600 hover:bg-purple-700 text-white"
+                className="w-full"
                 disabled={signUpForm.formState.isSubmitting}
               >
                 {signUpForm.formState.isSubmitting ? (
@@ -225,7 +217,6 @@ export function AuthForm() {
             </form>
           </TabsContent>
         </Tabs>
-      </CardContent>
-    </Card>
+    </div>
   );
 }
