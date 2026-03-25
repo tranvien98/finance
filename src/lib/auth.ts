@@ -16,7 +16,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          throw new Error('Email and password are required');
+          return null;
         }
 
         await dbConnect();
@@ -25,7 +25,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         });
 
         if (!user) {
-          throw new Error('Incorrect email or password. Please try again.');
+          return null;
         }
 
         const isValid = await bcrypt.compare(
@@ -33,7 +33,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           user.hashedPassword
         );
         if (!isValid) {
-          throw new Error('Incorrect email or password. Please try again.');
+          return null;
         }
 
         return {

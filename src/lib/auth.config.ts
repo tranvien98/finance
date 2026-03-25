@@ -2,6 +2,7 @@ import type { NextAuthConfig } from 'next-auth';
 
 // Minimal Auth Config that is fully completely compatible with Edge Runtime
 export const authConfig = {
+  trustHost: true,
   session: {
     strategy: 'jwt',
     maxAge: 60 * 60 * 24 * 7, // 7 days
