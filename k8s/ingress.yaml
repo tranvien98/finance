@@ -5,8 +5,9 @@ metadata:
   namespace: dev-software
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
+    acme.cert-manager.io/http01-ingress-class: traefik
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
     - hosts:
         - finance.viendev.xyz

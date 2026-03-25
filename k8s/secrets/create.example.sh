@@ -10,6 +10,7 @@ export NEXTAUTH_SECRET=$(hash "your-nextauth-secret")
 export NEXTAUTH_URL=$(hash "https://finance.viendev.xyz")
 export ENCRYPTION_SECRET=$(hash "your-encryption-secret")
 export APP_URL=$(hash "https://finance.viendev.xyz")
+export AUTH_TRUST_HOST=$(hash "true")
 
 # gen
 envsubst < ./secrets.template.yml > gen.secrets-${NAMESPACE_RAW}.yml
