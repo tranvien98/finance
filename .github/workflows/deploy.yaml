@@ -34,7 +34,7 @@ jobs:
 
       - name: Login to K8S
         run: |
-          echo "${{ secrets.KUBECONFIG }}" | base64 -d > /tmp/kubeconfig
+          echo "${{ secrets.KUBECONFIG }}" > /tmp/kubeconfig
           echo "KUBECONFIG=/tmp/kubeconfig" >> $GITHUB_ENV
 
       - name: Set up Docker Buildx
