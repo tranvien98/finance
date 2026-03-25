@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: finance
-  namespace: finance
+  namespace: dev-software
 spec:
   selector:
     app: finance

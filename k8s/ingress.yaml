@@ -1,11 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: finance
-  namespace: finance
+  name: finance-app
+  namespace: dev-software
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - finance.viendev.xyz
+      secretName: finance-tls
   rules:
-    - host: finance.yourdomain.com
+    - host: finance.viendev.xyz
       http:
         paths:
           - path: /

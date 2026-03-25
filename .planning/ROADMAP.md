@@ -135,6 +135,8 @@ Plans:
 **Plans**: TBD
 
 Plans:
+- [x] 07-01-PLAN.md — Core UI Polish (loading states, toasts, mobile)
+- [x] 07-02-PLAN.md — AI-Generated Insights (OpenRouter API, Dashboard Card)
 
 ## Progress
 
@@ -151,4 +153,4 @@ Note: Phase 4 depends only on Phase 1 (not Phase 2 or 3), and Phase 6 depends on
 | 4. AI Classification | 3/3 | Complete    | 2026-03-22 |
 | 5. Telegram Bot | 3/3 | Complete   | 2026-03-23 |
 | 6. Investment Tracking | 3/3 | Complete    | 2026-03-23 |
-| 7. UI Polish and Insights | 0/2 | Planned    |  |
+| 7. UI Polish and Insights | 2/2 | Complete    | 2026-03-23 |

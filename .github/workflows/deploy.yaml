@@ -13,14 +13,14 @@ permissions:
 env:
   CODENAME: tranvien98/finance
   SERVICE: finance
-  NAMESPACE: finance
+  NAMESPACE: dev-software
   TAG: ${{ github.run_id }}
   STAGE: staging
   SERVICE_PORT: 3000
 
 jobs:
   install-build-and-push-to-k8s:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     permissions:
       contents: read
