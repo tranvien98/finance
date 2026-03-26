@@ -4,7 +4,7 @@ import { TelegramBotCard } from '@/components/settings/telegram-bot-card';
 import { AccountCard } from '@/components/settings/account-card';
 
 export const metadata: Metadata = {
-  title: 'Settings — Finance',
+  title: 'Settings',
 };
 
 export default function SettingsPage() {

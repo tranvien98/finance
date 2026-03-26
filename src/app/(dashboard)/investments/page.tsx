@@ -4,7 +4,7 @@ import Investment from '@/models/investment.model';
 import { redirect } from 'next/navigation';
 import { InvestmentList } from '@/components/investments/investment-list';
 
-export const metadata = { title: 'Investments — Finance' };
+export const metadata = { title: 'Investments' };
 
 export default async function InvestmentsPage() {
   const session = await auth();

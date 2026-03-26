@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation';
 import { ExpenseList } from '@/components/expenses/expense-list';
 import { QuickAdd } from '@/components/expenses/quick-add';
 
-export const metadata = { title: 'Expenses — Finance' };
+export const metadata = { title: 'Expenses' };
 
 export default async function ExpensesPage() {
   const session = await auth();

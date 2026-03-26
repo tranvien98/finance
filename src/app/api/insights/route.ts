@@ -57,7 +57,7 @@ Top Categories: ${stats.categoryBreakdown.slice(0, 3).map(c => `${c.category} ($
       headers: {
         "Authorization": `Bearer ${apiKey}`,
         "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-        "X-Title": "Finance App",
+        "X-Title": "VFin",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({

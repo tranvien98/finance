@@ -10,8 +10,11 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Finance",
-  description: "Personal finance tracker with AI-powered expense classification",
+  title: {
+    default: "VFin — Quản lý tài chính",
+    template: "%s — VFin",
+  },
+  description: "Quản lý chi tiêu & đầu tư cá nhân",
 };
 
 export default function RootLayout({

@@ -27,7 +27,7 @@ function SidebarContent({ pathname, email }: { pathname: string; email?: string 
   return (
     <>
       <div className="p-6">
-        <h2 className="text-xl font-semibold tracking-tight text-foreground">Finance</h2>
+        <h2 className="text-xl font-semibold tracking-tight text-foreground">VFin</h2>
       </div>
       <nav className="flex-1 px-3 space-y-1">
         {navItems.map((item) => {
@@ -105,7 +105,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <button onClick={() => setMobileOpen(true)} className="text-muted-foreground hover:text-foreground">
             <Menu className="h-5 w-5" />
           </button>
-          <h2 className="text-lg font-semibold text-foreground">Finance</h2>
+          <h2 className="text-lg font-semibold text-foreground">VFin</h2>
         </header>
         <main className="flex-1 overflow-y-auto">{children}</main>
       </div>
