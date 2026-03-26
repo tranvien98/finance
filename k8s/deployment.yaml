@@ -20,6 +20,9 @@ spec:
           image: ghcr.io/${CODENAME}/${STAGE}/${SERVICE}:${TAG}
           ports:
             - containerPort: ${SERVICE_PORT}
+          env:
+            - name: TZ
+              value: Asia/Ho_Chi_Minh
           envFrom:
             - secretRef:
                 name: finance-env
